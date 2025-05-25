@@ -1,0 +1,74 @@
+ 
+ROUGE y BLEU son métricas utilizadas para evaluar la calidad de textos generados automáticamente, como resúmenes, traducciones o cualquier otro tipo de texto generado por modelos de lenguaje. Ambas se basan en la comparación entre un texto generado por el modelo y uno o más textos de referencia, escritos por humanos.
+
+---
+
+### **1. ROUGE (Recall-Oriented Understudy for Gisting Evaluation)**
+Es una métrica que evalúa la calidad de un texto generado midiendo el solapamiento de palabras o frases con los textos de referencia. Es muy popular en tareas de resumen automático.
+
+#### **Principales variantes de ROUGE:**
+- **ROUGE-N:** Mide el solapamiento de *n-gramas* (secuencias de palabras contiguas) entre el texto generado y el de referencia.
+  - Por ejemplo:
+    - Texto de referencia: "El gato negro"
+    - Texto generado: "El gato blanco"
+    - ROUGE-1 (unigrama): 2 palabras coinciden ("El", "gato").
+    - ROUGE-2 (bigramas): 1 bigrama coincide ("El gato").
+- **ROUGE-L:** Evalúa la longitud de la subsecuencia común más larga (LCS) entre el texto generado y el de referencia, considerando el orden de las palabras.
+- **ROUGE-S:** Mide el solapamiento de *skip-gramas* (pares de palabras que aparecen en el mismo orden, pero no necesariamente consecutivas).
+
+#### **Ventajas:**
+- Enfocado en la cobertura del contenido relevante.
+- Mide qué tanto del texto de referencia está presente en el texto generado.
+
+#### **Limitaciones:**
+- Puede penalizar textos bien escritos que usen sinónimos o paráfrasis.
+- No mide aspectos como fluidez o gramática.
+
+---
+
+### **2. BLEU (Bilingual Evaluation Understudy)**
+Es una métrica ampliamente utilizada en traducción automática, pero también se usa para evaluar generación de textos. BLEU mide la precisión: cuántos n-gramas del texto generado están presentes en el texto de referencia.
+
+#### **Funcionamiento básico:**
+- Calcula el número de *n-gramas* coincidentes entre el texto generado y el de referencia.
+- Incluye un "penalizador de longitud" para evitar que textos muy cortos (que coincidan perfectamente) obtengan una puntuación alta.
+
+#### **Fórmula simplificada de BLEU:**
+\[ BLEU = BP \cdot exp\left(\sum_{n=1}^N w_n \cdot log(p_n)\right) \]
+
+Donde:
+- \( BP \): *Brevity Penalty*, penalización por diferencias de longitud.
+- \( w_n \): Peso asignado a cada *n-grama* (generalmente uniformes).
+- \( p_n \): Precisión de los *n-gramas* generados.
+
+#### **Ejemplo:**
+- Texto de referencia: "El gato negro está en el jardín".
+- Texto generado: "El gato está en el jardín".
+  - BLEU-1 (unigrama): 5 de 6 palabras coinciden.
+  - BLEU-2 (bigramas): 4 de 5 bigramas coinciden.
+
+#### **Ventajas:**
+- Evalúa la precisión, evitando redundancia en el texto generado.
+- Es útil en tareas donde la exactitud semántica es crítica (e.g., traducción).
+
+#### **Limitaciones:**
+- Penaliza textos correctos que usan sinónimos o variaciones gramaticales.
+- Depende mucho de la longitud de las referencias.
+
+---
+
+### **Comparativa ROUGE vs. BLEU**
+| Aspecto            | ROUGE                  | BLEU                     |
+|---------------------|------------------------|--------------------------|
+| **Enfoque**         | Cobertura (*recall*)   | Precisión (*precision*)  |
+| **Aplicación común**| Resumen automático     | Traducción automática    |
+| **Soporte a sinónimos**| No                  | No                       |
+| **Penalización de longitud** | Implícita    | Explícita (BP)           |
+
+---
+
+### **En tu caso (historias clínicas):**
+- **ROUGE:** Es útil para medir cuánto del contenido esperado (como antecedentes, tratamiento, etc.) está presente en el texto generado. Especialmente relevante si quieres garantizar que el sistema cubra todos los elementos importantes del historial.
+- **BLEU:** Podría complementar evaluaciones al medir la precisión del texto generado respecto a uno ideal, especialmente si buscas asegurar exactitud en frases clave.
+
+Ambas métricas juntas pueden darte una evaluación robusta del modelo.

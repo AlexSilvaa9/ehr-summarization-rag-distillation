@@ -1,0 +1,79 @@
+\documentclass[12pt, a4paper, twoside]{article}
+
+%% Preamble
+\usepackage{umatfgspanish}
+\usepackage{blindtext}
+
+\graphicspath{{images/}{../images/}}
+
+
+
+\usepackage[backend=biber, style=apa]{biblatex} % Usa el estilo que prefieras
+\addbibresource{bibliography.bib} % Especifica el archivo de bibliografía
+
+\usepackage{float}
+\usepackage{subfiles} % Best loaded last in the preamble
+
+\begin{document}
+
+%% Cover
+\includepdf[noautoscale=true, width=\paperwidth]{cover.pdf}
+
+%% Title
+\clearpage
+\setcounter{page}{1}
+
+\includepdf[noautoscale=true, width=\paperwidth]{title.pdf}
+
+\newpage
+
+%% Abstract
+\subfile{sections/abstract}
+
+\newpage
+
+\subfile{sections/resumen}
+
+\tableofcontents
+
+%% Sections
+\section{Introducción}
+\subfile{sections/introduccion}
+
+\section{Antecedentes}
+\subfile{sections/antecedentes}
+
+\section{Metodología}
+\subfile{sections/metodologia}
+
+
+\section{Resultados y Discusión}
+\subfile{sections/resultados_discusion}
+
+\section{Conclusiones y Líneas Futuras}
+\subfile{sections/conclusiones}
+
+%% Bibliography
+\printbibliography
+
+
+\newpage
+
+%% Apendices
+\begin{umaappendices}
+  \section{Manual de \\ Instalación}
+\end{umaappendices}
+
+\begin{umaappendices}
+  \section{Código}
+  \subfile{apendices/codigo}
+\end{umaappendices}
+
+\begin{umaappendices}
+  \section{Figuras}
+\end{umaappendices}
+
+
+%% Back Cover
+\includepdf[noautoscale=true, width=\paperwidth]{backcover.pdf}
+\end{document}

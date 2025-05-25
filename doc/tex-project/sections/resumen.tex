@@ -1,0 +1,40 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+	%% begin abstract format
+	\makeatletter
+	\renewenvironment{abstract}{%
+		\if@twocolumn
+		\section*{Resumen \\}%
+		\else %% <- here I've removed \small
+		\begin{flushright}
+			{\filleft\Huge\bfseries\fontsize{48pt}{12}\selectfont Resumen\vspace{\z@}}%  %% <- here I've added the format
+		\end{flushright}
+		\quotation
+		\fi}
+	{\if@twocolumn\else\endquotation\fi}
+	\makeatother
+	%% end abstract format
+	%% begin abstract format
+	\makeatletter
+	\renewenvironment{abstract}{%
+		\if@twocolumn
+		\section*{Resumen \\}%
+		\else %% <- here I've removed \small
+		\begin{flushright}
+			{\filleft\Huge\bfseries\fontsize{48pt}{12}\selectfont Resumen\vspace{\z@}}%  %% <- here I've added the format
+		\end{flushright}
+		\quotation
+		\fi}
+	{\if@twocolumn\else\endquotation\fi}
+	\makeatother
+	%% end abstract format
+	\begin{abstract}
+		La generación automática de resúmenes clínicos a partir de textos no estructurados representa un desafío relevante en el ámbito médico, donde la redundancia y la desorganización de los historiales pueden dificultar la toma de decisiones. Este trabajo explora el uso de modelos de lenguaje pequeños (Small Language Models, SLMs) como alternativa eficiente y accesible a los modelos de gran escala, evaluando su rendimiento en tareas de síntesis clínica. Se han aplicado estrategias avanzadas de prompt engineering, siendo especialmente efectiva la generación por partes, y se ha incorporado un enfoque de Recuperador-Generador (RAG) con preguntas múltiples para enriquecer el contexto del modelo. Además, se ha realizado un ajuste fino sobre LLaMA 3.2, evidenciando buen aprendizaje pero con sobreajuste estilístico, lo que resalta la importancia de contar con un corpus clínicamente alineado. La evaluación automática se ha complementado con validación experta, y se ha desarrollado una aplicación web funcional que integra el modelo optimizado, permitiendo la generación y validación de resúmenes en un entorno práctico. En conjunto, el estudio valida un flujo de trabajo reproducible y muestra el potencial real de los SLMs en contextos clínicos, a pesar de sus limitaciones frente a modelos como GPT-4o-mini.
+		
+		\bfseries{\large{Palabras clave:}} Resumen clínico automático, Procesamiento del lenguaje natural (PLN), Modelos de lenguaje pequeños
+		
+	\end{abstract}
+\end{document}
+
+

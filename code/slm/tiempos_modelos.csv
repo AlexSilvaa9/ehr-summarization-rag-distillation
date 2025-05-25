@@ -1,0 +1,8 @@
+Modelo,Media,Desviación
+deepseek-r1:8b,157.26,85.74
+deepseek-r1:14b,386.24,182.28
+llama3.1,48.2,37.64
+qwen:14b,42.61,2.65
+mistral,60.98,60.25
+phi4,172.79,47
+llama3.2,15.2,3.23

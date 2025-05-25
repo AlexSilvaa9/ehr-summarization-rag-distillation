@@ -1,0 +1,109 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+\subsection{Motivación}
+Las consultas clínicas e historiales reales suelen presentarse en forma de textos no estructurados, donde los profesionales de la
+salud frecuentemente copian y pegan información de consultas previas. Este método genera redundancia en los datos y dificulta
+la identificación de la información clínica actualizada y relevante, lo que puede impactar negativamente en la toma de decisiones
+médicas y en la eficiencia de los sistemas de gestión hospitalaria (\cite{searle2021estimating}).
+
+En los últimos años, los modelos de lenguaje de gran escala (LLMs, por sus siglas en inglés) han demostrado avances notables
+en la generación de resúmenes de alta calidad a partir de textos extensos (\cite{zhang2025comprehensivesurveyprocessorientedautomatic}). Sin embargo, estos modelos suelen ser de gran
+tamaño y, en muchos casos, su uso está limitado por costos asociados a licencias propietarias. Como respuesta a esta limitación,
+se ha promovido el desarrollo de modelos de lenguaje pequeños (Small Language Models, SLMs), los cuales ofrecen accesibilidad
+y menores requerimientos computacionales. No obstante, estos modelos presentan desafíos significativos, como la omisión de
+información clave y entidades relevantes, especialmente cuando los documentos de entrada son extensos (\cite{zhang2024optimizingautomaticsummarizationlong,grail2021globalizing}).
+
+Este trabajo surge de la necesidad de explorar soluciones eficientes para la generación de resúmenes clínicos que mantengan la
+relevancia de la información y sean accesibles en términos de costo y recursos computacionales. El dominio de aplicación de este
+estudio se encuentra en el procesamiento del lenguaje natural (NLP) aplicado al ámbito médico, con un enfoque en la mejora de
+los resúmenes clínicos generados por modelos de lenguaje pequeños.
+
+
+
+
+
+\subsection{Marco de Investigación}
+
+Aunque este trabajo no se desarrolla directamente dentro del grupo de investigación de inteligencia computacional en biomedicina de la universidad de Málaga, guarda una estrecha relación con una de sus líneas actuales y pretende colaborar en el avance de la misma. El grupo Inteligencia Computacional en Biomedicina, liderado por el Dr. José Manuel Jerez Aragonés, pertenece al Departamento de Lenguajes y Ciencias de la Computación de la E.T.S.I. de Informática y está adscrito al Instituto Universitario de Investigación en Tecnologías Lingüísticas Multilingües (IUITLM).
+
+Desde su fundación en enero de 2012, el grupo se ha centrado en el diseño de algoritmos de Inteligencia Artificial y Procesamiento del Lenguaje Natural para el análisis automático de información no estructurada, especialmente la contenida en historias clínicas electrónicas.
+
+\subsection{Objetivos}
+\textbf{Objetivo General}  
+
+Desarrollar y evaluar modelos de lenguaje pequeños (Small Language Models, SLMs) en la generación de resúmenes clínicos,
+comparándolos con modelos de mayor escala como GPT-4, y optimizando su desempeño mediante técnicas avanzadas de
+procesamiento del lenguaje natural.
+
+\textbf{Objetivos Específicos}  
+\begin{enumerate}
+    \item \textbf{Evaluación del desempeño de SLMs}
+    \begin{itemize}
+        \item Analizar la capacidad de SLMs en la generación de resúmenes clínicos.
+        \item Comparar su rendimiento con modelos de mayor escala como GPT-4.
+    \end{itemize}
+    \item \textbf{Optimización de la generación de resúmenes}
+    \begin{itemize}
+        \item Identificar técnicas que permitan mejorar la calidad de los resúmenes generados por SLMs.
+        \item Implementar estrategias de \textit{prompt engineering} para optimizar la generación de resúmenes.
+        \item Aplicar técnicas avanzadas como RAG (Recuperador Generador), \textit{fine-tuning} y destilación de conocimiento.
+    \end{itemize}
+    \item \textbf{Validación y evaluación de resultados}
+    \begin{itemize}
+        \item Evaluar la calidad y relevancia de los resúmenes mediante la consulta con expertos médicos.
+        \item Aplicar métricas especializadas para medir la precisión y coherencia de los resúmenes:
+        \begin{itemize}
+            \item Métricas de superposición: ROUGE, BLEU, METEOR.
+            \item Métricas de similitud semántica: BERTScore.
+            \item Evaluaciones basadas en SLMs para un análisis más preciso.
+        \end{itemize}
+    \end{itemize}
+    \item \textbf{Desarrollo de una aplicación prototipo}
+    \begin{itemize}
+        \item Diseñar y desarrollar una aplicación web que implemente el mejor modelo identificado para la generación
+        automática de resúmenes de historiales clínicos.
+    \end{itemize}
+\end{enumerate}
+
+\subsection{Estructura del documento}
+
+\begin{enumerate}
+    \item \textbf{Antecedentes}: Un repaso de trabajos anteriores y aclaración de terminología.
+    \item \textbf{Generación y validación de resúmenes modelo}: Generación de resúmenes de referencia utilizando GPT-4 y validación con un profesional médico para establecer un punto de comparación.
+    \item \textbf{Desarrollo y optimización de modelos SLMs}: Uso de modelos de lenguaje pequeños (SLMs) y técnicas de \textit{prompt engineering} para la síntesis de historiales clínicos. 
+    \item \textbf{Evaluación comparativa}: Comparación de los resúmenes generados por SLMs con los de GPT-4. Para ello, se emplearán métricas especializadas como ROUGE, BLEU y BERTScore, asegurando una evaluación objetiva de la calidad del texto.
+    \item \textbf{Implementación de modelo final}: Aplicación de destilación del conocimiento de modelo GPT-4 hacia el mejor Slm e implementación de RAG.
+
+    \item \textbf{Comparación final y validación con expertos}: Realización de  evaluación de los resultados obtenidos con respecto a los resúmenes de referencia, además de contrastarlos con la opinión de profesionales médicos para garantizar la utilidad y precisión del sistema.
+    \item \textbf{Desarrollo del prototipo de aplicación web}: Diseño e implementación de una aplicación web en la que se integra el mejor modelo seleccionado para la generación automática de resúmenes clínicos, permitiendo su validación en un entorno práctico.
+
+\end{enumerate}
+
+\subsection{Tecnologías usadas}
+En la tabla \ref{tab:tecnologias} se encuentran las tecnologías y recursos usados en la elaboración de este trabajo.
+\begin{table}[h]
+    \centering
+    \caption{Lista de tecnologías utilizadas en el proyecto.}
+    \label{tab:tecnologias}
+    \renewcommand{\arraystretch}{1.2}
+    \begin{tabular}{c}
+        \hline
+        \textbf{Tecnologías usadas} \\
+        \hline
+        Python \\
+        PyTorch \\
+        Hugging Face \\
+        Ollama \\
+        Unsloth \\
+        ChromaDB \\
+        FastAPI \\
+        JavaScript \\
+        Visual Studio Code \\
+        Tarjeta de video Nvidia RTX 3050 Laptop \\
+        \hline
+    \end{tabular}
+
+\end{table}
+
+\end{document}

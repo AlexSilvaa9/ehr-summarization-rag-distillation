@@ -1,0 +1,33 @@
+Parece que varios estudios apuntan a que es viable resumir historiales clínicos con sLLM, y he encontrado varias técnicas que me parecen interesantes para investigar. Creo que lo mejor es empezar desde lo más simple y, si fuese necesario, emplear estas técnicas más avanzadas para mejorar los resúmenes.
+
+También quería confirmar que la idea principal es seguir estos pasos:
+
+1. Buscar bibliografía sobre modelos, técnicas, métricas...
+2. Utilizar GPT-4 o modelos similares para hacer los resúmenes.
+3. Consultar con un médico si estos resúmenes están bien hechos.
+4. Aplicar modelos y métodos de estado del arte en SLLM y prompt engineering para resumir historiales.
+5. Comparar estos resúmenes con los de GPT-4, verificados con ROUGE, BLEU y demás métricas.
+
+Técnicas interesantes:
+
+- Prometedoras y fácilmente implementables:
+    - RAG (Recuperador Generador): Una técnica combinada que genera resúmenes relevantes a partir de información recuperada.
+    - Fine-tuning: Posibilidad de combinarlo con Knowledge Distillation, donde un modelo más pequeño se ajusta mediante un modelo grande que ya produce buenos resultados.
+
+- Prometedoras pero parecen más complejas:
+    - Extensión dinámica del contexto (NBCE, Naive Bayes Context Extension): Método que ha demostrado buenos resultados, especialmente útil para historiales clínicos largos.
+    - Capa de propagación jerárquica: Permite compartir información entre múltiples ventanas de transformadores (basado en BERT).
+
+Prompt engineering (según la literatura, uno de los aspectos más importantes).
+
+Evaluación:
+
+- Overlap:
+    - ROUGE: La más usada en ATS (auto text summarization).
+    - BLEU: Similar a ROUGE, pero utiliza precisión.
+    - METEOR: Diseñada para abordar explícitamente las debilidades de BLEU, como variantes de ortografía, sinónimos y tablas de paráfrasis.
+
+- Similitud (parece ser mejor que el overlap):
+    - BERTSCORE: Se correlaciona mejor con los juicios humanos, proporcionando un mejor rendimiento en la selección de modelos.
+
+- Métricas basadas en LLMs (según la bibliografía, es lo mejor).

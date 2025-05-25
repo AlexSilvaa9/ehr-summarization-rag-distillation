@@ -1,0 +1,12 @@
+Modelos disponibles y su ventana de contexto:
+---------------------------------------------
+deepseek-r1 -> Contexto: Desconocido tokens
+gemma2 -> Contexto: 8192 tokens
+llama3.1 -> Contexto: 131072 tokens
+llama3.1_test -> Contexto: 131072 tokens
+mistral -> Contexto: 32768 tokens
+NAME -> Contexto: Desconocido tokens
+phi3 -> Contexto: 131072 tokens
+phi4 -> Contexto: 16384 tokens
+prod_model -> Contexto: 131072 tokens
+qwen -> Contexto: Desconocido tokens

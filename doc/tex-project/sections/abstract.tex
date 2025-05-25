@@ -1,0 +1,25 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+%% begin abstract format
+\makeatletter
+\renewenvironment{abstract}{%
+    \if@twocolumn
+      \section*{Abstract \\}%
+    \else %% <- here I've removed \small
+    \begin{flushright}
+        {\filleft\Huge\bfseries\fontsize{48pt}{12}\selectfont Abstract\vspace{\z@}}%  %% <- here I've added the format
+        \end{flushright}
+      \quotation
+    \fi}
+    {\if@twocolumn\else\endquotation\fi}
+\makeatother
+%% end abstract format
+\begin{abstract}
+
+The automatic generation of clinical summaries from unstructured medical texts represents a significant challenge, as redundancy and disorganization in patient records can hinder effective decision-making. This study explores the use of Small Language Models (SLMs) as a cost-effective and accessible alternative to large-scale models, evaluating their performance in clinical summarization tasks. Advanced prompt engineering strategies were applied, with step-by-step generation proving particularly effective. Additionally, a multi-question Retrieval-Augmented Generation (RAG) approach was implemented to enhance contextual understanding. Fine-tuning of the LLaMA 3.2 model revealed effective learning but also stylistic overfitting, highlighting the need for a corpus better aligned with clinical writing. Automatic evaluation was complemented by expert validation, and a functional web application was developed to integrate the optimized model, enabling practical generation and assessment of clinical summaries. Overall, the study validates a reproducible workflow and demonstrates the real-world potential of SLMs in clinical environments, despite their limitations compared to larger models like GPT-4o-mini.
+
+\bfseries{\large{Keywords:}} Clinical summarization, Natural Language Processing (NLP), Small Language Models
+
+\end{abstract}
+\end{document}

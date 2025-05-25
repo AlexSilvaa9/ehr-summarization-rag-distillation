@@ -1,0 +1,36 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+\subsection{Conclusiones y Líneas Futuras}
+
+\subsubsection{Conclusiones}
+
+Este trabajo ha demostrado que los modelos de lenguaje pequeños (SLMs) pueden generar resúmenes clínicos de calidad aceptable mediante el uso de estrategias de \textit{prompting} adecuadas, siendo especialmente efectiva la generación por partes. Aunque las métricas de similitud no igualan a modelos de mayor escala como GPT-4o-mini, se han obtenido resultados prometedores, destacando modelos como phi4 y llama3.2.
+
+La implementación del enfoque de RAG con estrategia multipregunta ha permitido mejorar la calidad de los resúmenes generados, si bien a costa de un aumento en el tiempo de inferencia. Sin embargo, la arquitectura utilizada es fácilmente paralelizable, lo cual sugiere oportunidades de optimización para futuras implementaciones.
+
+Respecto al ajuste fino  del modelo llama3.2, los resultados muestran un aprendizaje eficaz, pero también un sobreajuste al estilo conversacional del conjunto de datos utilizado. Esto afectó negativamente la estructura clínica esperada en los resúmenes, lo que evidencia la necesidad de un corpus mejor alineado con nuestro problema.
+
+En conjunto, se ha validado un flujo de trabajo reproducible para evaluar y optimizar modelos ligeros en tareas de síntesis clínica, combinando evaluación automática y validación por parte de expertos médicos.
+
+Se ha desarrollado una aplicación web funcional que permite ingresar historiales clínicos y obtener resúmenes generados automáticamente. Esta herramienta facilita la validación práctica de los modelos y demuestra la aplicabilidad real del sistema en entornos clínicos.
+
+\subsubsection{Líneas Futuras}
+
+\begin{itemize}
+	\item \textbf{Reentrenamiento con corpus clínico estructurado:} Se propone realizar un nuevo ajuste fino utilizando conjuntos de datos más alineados con el lenguaje y formato de historia y resúmen clínico, evitando estilos conversacionales.
+	
+	\item \textbf{Optimización del sistema RAG:} Es recomendable paralelizar las etapas de recuperación y generación de contexto para reducir el tiempo de inferencia. También se podrían explorar técnicas de prefiltrado de recuperación para minimizar el volumen de consultas.
+	
+	\item \textbf{Evaluación cualitativa ampliada:} Se sugiere incluir a un mayor número de profesionales médicos en la validación de los resultados.
+	
+	\item \textbf{Integración en entornos hospitalarios:} Finalmente, se plantea la posibilidad de desplegar el sistema en entornos clínicos reales o simulados, mediante su conexión a sistemas de historia clínica electrónica (HCE), para evaluar su impacto práctico y su aceptación por parte de los usuarios finales.
+	
+	\item \textbf{Desarrollo de un asistente clínico inteligente:} Inspirado en herramientas como \textit{Dragon Copilot} de Microsoft, que asiste a los médicos en la documentación clínica mediante dictado por voz, generación automática de notas y acceso a información médica relevante en tiempo real \parencite{microsoft_dragon_copilot}, se plantea el desarrollo de un asistente similar adaptado al contexto local. Este asistente tendría como objetivo asistir a los profesionales de la salud en la redacción y revisión de historiales clínicos, proporcionando resúmenes automáticos, sugerencias de documentación y alertas sobre inconsistencias o información faltante, todo ello integrado en los sistemas de historia clínica electrónica (HCE).
+	
+
+	
+
+\end{itemize}
+
+\end{document}

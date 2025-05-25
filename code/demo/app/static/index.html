@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Resúmenes Médicos</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="main">
+        <header style="min-height:100%;background-color: #003366; color: #ffffff; padding: 15px 20px; font-family: Arial, sans-serif;">
+            <div style="max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap;">
+              
+              <!-- Sección izquierda: título del módulo -->
+              <div style="flex: 1; min-width: 250px;">
+                <h2 style="margin: 0; font-size: 1.5em;">Resumen de Historia Clínica</h2>
+              </div>
+          
+              <!-- Sección derecha: navegación contextual -->
+              <nav style="flex: 2; min-width: 300px; text-align: right;">
+                <a href="/dashboard" style="color: #ffffff; text-decoration: none; margin-left: 20px;">Inicio</a>
+                <a href="/pacientes" style="color: #ffffff; text-decoration: none; margin-left: 20px;">Pacientes</a>
+                <a href="/historiales" style="color: #ffffff; text-decoration: none; margin-left: 20px;">Historias Clínicas</a>
+                <a href="/resumenes" style="color: #ffffff; text-decoration: underline; margin-left: 20px;">Resumen</a>
+                <a href="/configuracion" style="color: #ffffff; text-decoration: none; margin-left: 20px;">Configuración</a>
+              </nav>
+          
+            </div>
+          </header>
+          
+          
+    <div class="container">
+        <div class="formulario">
+        <h1 style="font-size: 2.5em; font-weight: bold; color: #2c3e50; text-align: center; text-transform: uppercase; letter-spacing: 2px; margin-top: 20px;">
+            Generador de Resúmenes Médicos
+        </h1>
+            
+        <div class="top-row">
+
+            <div class="file-upload">
+                <form class="form">
+                    <span class="form-title">Sube tu archivo</span>
+                    <label for="file-input" class="drop-container">
+                        <span class="drop-title">Arrastra tu archivo aquí</span>
+                        o
+                        <input type="file" accept=".txt" required="" id="file-input">
+                    </label>
+                </form>
+                
+            </div>
+        </div>
+        <div class="div2">
+            <button onclick="obtenerResumen()">Generar Resumen</button>
+        </div>
+
+
+        
+    </div>
+        <div class="bottom-row">
+            <div class="original contenedor-scroll">
+                <p><strong>Historial Original:</strong></p>
+                <p id="original"></p>
+            </div>
+            <div class="result contenedor-scroll">
+                <p><strong>Resumen:</strong> 
+                <div id="resumen"></div>   
+                <div id="loading" style="display: none;">
+                    <svg width="64px" height="48px">
+                        <polyline points="0.157 23.954, 14 23.954, 21.843 48, 43 0, 50 24, 64 24" id="back"></polyline>
+                        <polyline points="0.157 23.954, 14 23.954, 21.843 48, 43 0, 50 24, 64 24" id="front"></polyline>
+                    </svg>
+                </div>
+                  
+            </div>
+
+        </div>
+    </div>
+    <footer style="background-color: #003366; color: #ffffff; padding: 20px 0; font-family: Arial, sans-serif;">
+        <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; padding: 0 20px;">
+          <!-- Logotipo de la UMA -->
+          <div style="flex: 1; min-width: 200px; text-align: center; margin-bottom: 10px;">
+            <a href="https://www.uma.es" target="_blank" rel="noopener">
+              <img src="/static/assets/uma_logo.png" alt="Universidad de Málaga" style="height: 60px;">
+            </a>
+          </div>
+          <!-- Información del grupo de investigación -->
+          <div style="flex: 2; min-width: 300px; text-align: center; margin-bottom: 10px;">
+             <p>Este trabajo, aunque no desarrollado directamente dentro del grupo <strong>Inteligencia Computacional en Biomedicina</strong>, 
+                se alinea con una de sus líneas actuales de investigación y busca contribuir a su avance.</p>
+                
+          </div>
+          <!-- Nombre del desarrollador -->
+          <div style="flex: 1; min-width: 200px; text-align: center; margin-bottom: 10px;">
+            <p style="margin: 0; font-size: 0.9em;">Desarrollado por Alejandro Silva Rodríguez</p>
+          </div>
+        </div>
+      </footer>
+
+</div>
+    
+      
+
+    <script src="/static/script2.js"></script>
+
+</body>
+</html>

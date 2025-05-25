@@ -1,0 +1,73 @@
+**Resumen Detallado del Registro Médico Electrónico**
+
+**Historial Médico Personal y Familiar:**
+
+- No se proporcionan detalles específicos sobre el historial médico personal o familiar del paciente.
+
+**Diagnósticos Previos:**
+
+- El paciente ha sido diagnosticado con cáncer avanzado, probablemente cáncer colorrectal debido a la referencia al régimen FOLFOX y Nivolumab.
+
+- Progresión tumoral evidenciada por varias exploraciones por TC que muestran carcinomatosis peritoneal, metástasis hepáticas, adenopatías aumentadas y metástasis suprarrenales.
+
+**Medicamentos y Dosis Relevantes:**
+
+- **FOLFOX + Nivolumab:** Tratamiento paliativo en primera línea. Se menciona la reducción de dosis debido a toxicidad.  
+
+- FOLFOX incluye 5-fluorouracilo, leucovorina y oxaliplatino.  
+
+- Nivolumab administrado inicialmente a 240 mg, con una reducción del 20% en el ciclo C4 por toxicidad.
+
+- **Dexametasona:** Inicialmente prescrita a 4 mg cada 24 horas para manejar síntomas. Posteriormente reducida a 2 mg durante 5 días antes de suspenderse.
+
+- **Dexketoprofeno:** Prescrito junto con dexametasona en un momento del tratamiento.
+
+**Procedimientos Significativos:**
+
+- Colocación de portacath para facilitar la administración de quimioterapia.
+
+- Evaluación ecográfica (ecodoppler) sugerida para descartar trombosis venosa debido a hallazgos en TC.
+
+**Evolución Clínica y Plan:**
+
+- Progresión significativa del cáncer con aumento de los niveles de CA 19.9, lo que llevó al cese del tratamiento paliativo.
+
+- Mala tolerancia a la quimioterapia manifestada por anorexia severa y pérdida de peso significativa.
+
+- Toxicidad hematológica (neutropenia G3) causando retrasos en el tratamiento.
+
+- Derivación al servicio de cuidados paliativos debido a la progresión del cáncer.
+
+**Evolución de los Marcadores Tumorales:**
+
+- CA 19.9 mostró un aumento desde 362 hasta 468, indicando progresión tumoral.
+
+**Variables Clínicas Clave:**
+
+- **Hematología:**   
+
+- Hemoglobina disminuyó de 12.8 a 10.6.  
+
+- Plaquetas: 189,000 el 21/02/2024.
+
+- **Electrolitos:**  
+
+- Potasio (K) disminuyó a 3.17 el 21/02/2024.
+
+**Observaciones Clínicas:**
+
+- Astenia y dificultades con la nutrición, incluyendo problemas para tolerar suplementos nutricionales orales.
+
+- Ajustes dietéticos como consumo de plátanos, almendras y tomates para manejar los niveles de potasio.
+
+- Fragilidad progresiva del paciente requiriendo movilización en silla de ruedas.
+
+**Plan de Tratamiento:**
+
+- Continuación del tratamiento con FOLFOX ajustado y Nivolumab reducido en dosis.
+
+- Manejo nutricional conjunto con endocrinología.
+
+- Seguimiento regular mediante análisis clínicos y marcadores tumorales.
+
+- Apoyo por parte de la Unidad de Cuidados Paliativos debido a la fragilidad del paciente.Este resumen proporciona una visión general del estado clínico, tratamiento y plan de manejo para el paciente basado en los registros médicos disponibles.

@@ -1,0 +1,95 @@
+1-. Key-Element-Informed sLLM Tuning for Document Summarization
+
+Remarkable advances in large language models (LLMs) have enabled high-quality text summarization. However, this capability is currently accessible only through LLMs of substantial size or proprietary LLMs with usage fees. In response, smaller-scale LLMs (sLLMs) of easy accessibility and low costs have been extensively studied, yet they often suffer from missing key information and entities, i.e., low relevance, in particular, when input documents are long. We hence propose a key-element-informed instruction tuning for summarization, so-called KEITSum, which identifies key elements in documents and instructs sLLM to generate summaries capturing these key elements. Experimental results on dialogue and news datasets demonstrate that sLLM with KEITSum indeed provides high-quality summarization with higher relevance and less hallucinations, competitive to proprietary LLM.
+
+https://arxiv.org/abs/2406.04625
+
+2-. sLLM: Accelerating LLM Inference using Semantic Load Balancing with Shared Memory Data Structures
+
+doi: 10.1109/ISQED60706.2024.10528703
+
+3-. Automatic Generation of Discharge Summary of EMRs Based on Multi-granularity Information Fusion
+
+¿Qué es una red pointer-generator?
+La red pointer-generator es una técnica específica que se puede incorporar en modelos de lenguaje, especialmente en tareas de resumen de texto y generación de texto, para permitir que el modelo copie directamente palabras del texto de entrada además de generar nuevas palabras. Esto no es exclusivo de los LLMs, pero se puede usar dentro de ellos.
+ T5 o BART
+
+ https://doi.org/10.1007/978-981-99-9864-7_17
+
+
+
+4-. Optimizing Automatic Summarization of Long Clinical Records
+Using Dynamic Context Extension
+Testing and Evaluation of the NBCE Method
+
+
+ rendimiento casi equivalente al de Gemini de Google (175B) en métricas ROUGE-L, demostrando un fuerte desempeño con menos recursos y mejorando la viabilidad del resumen automático de EMR
+
+
+ https://arxiv.org/pdf/2411.08586
+
+
+5-. A Comprehensive Survey on Process-Oriented Automatic Text Summarization with Exploration of LLM-Based Methods
+
+ Automatic Text Summarization (ATS), utilizing Natural Language Processing (NLP) algorithms, aims to create concise and accurate summaries, thereby significantly reducing the human effort required in processing large volumes of text. ATS has drawn considerable interest in both academic and industrial circles. Many studies have been conducted in the past to survey ATS methods; however, they generally lack practicality for real-world implementations, as they often categorize previous methods from a theoretical standpoint. Moreover, the advent of Large Language Models (LLMs) has altered conventional ATS methods. In this survey, we aim to 1) provide a comprehensive overview of ATS from a ``Process-Oriented Schema'' perspective, which is best aligned with real-world implementations; 2) comprehensively review the latest LLM-based ATS works; and 3) deliver an up-to-date survey of ATS, bridging the two-year gap in the literature. To the best of our knowledge, this is the first survey to specifically investigate LLM-based ATS methods.
+
+
+
+
+
+ There are also studies that
+have designed LLM-based methods specifically for summary
+annotation. [77] used DialoGPT[78] and transformed summary
+annotation tasks into keyword extraction, redundancy detection, and topic segmentation tasks to improve the informativeness, relevance, and reduce redund
+
+79] proposed a GPT-3 based algorithm that annotates medical
+dialogue data through low-shot learning and ensembles, with
+a specific focus on capturing medically relevant information
+
+
+IMPORTANTE CONTENIDO:
+Knowledge Distillation from LLMs
+usar gpt como teacher para entrenar a un modelo más pequeño.
+ https://doi.org/10.48550/arXiv.2403.02901
+
+
+
+
+6-. Prompting for Directed Content in Literature Summarization: Fine-tuning to Steer Large Language Models in Academic Text Analysis
+
+https://www.authorea.com/doi/full/10.22541/au.172851183.35860277
+
+
+
+
+7-. Prompt Chaining or Stepwise Prompt? Refinement in Text Summarization
+
+Large language models (LLMs) have demonstrated the capacity to improve summary quality by mirroring a human-like iterative process of critique and refinement starting from the initial draft. Two strategies are designed to perform this iterative process: Prompt Chaining and Stepwise Prompt. Prompt chaining orchestrates the drafting, critiquing, and refining phases through a series of three discrete prompts, while Stepwise prompt integrates these phases within a single prompt. However, the relative effectiveness of the two methods has not been extensively studied. This paper is dedicated to examining and comparing these two methods in the context of text summarization to ascertain which method stands out as the most effective. Experimental results show that the prompt chaining method can produce a more favorable outcome. This might be because stepwise prompt might produce a simulated refinement process according to our various experiments. Since refinement is adaptable to diverse tasks, our conclusions have the potential to be extrapolated to other applications, thereby offering insights that may contribute to the broader development of LLMs.
+
+
+https://arxiv.org/abs/2406.00507
+
+
+8-.Globalizing BERT-based Transformer Architectures for Long Document Summarization
+
+doi: 10.18653/v1/2021.eacl-main.154
+
+9-. “Few-shot fine-tuning SOTA
+summarization models for medical dialogues,
+
+https://aclanthology.org/2022.naacl-srw.32/
+
+
+
+
+
+
+Estimating redundancy in clinical text
+
+ By comparing the information-theoretic efficient encoding of clinical text against open-domain corpora, we find that clinical text is 
+× to 
+× less efficient than open-domain corpora at conveying information. Our second measure, evaluates automated summarisation metrics Rouge and BERTScore to evaluate successive note pairs demonstrating lexicosyntactic and semantic redundancy, with averages from 
+43 to 
+65%.
+
+https://doi.org/10.1016/j.jbi.2021.103938

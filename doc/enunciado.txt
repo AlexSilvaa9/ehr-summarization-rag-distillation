@@ -1,0 +1,11 @@
+Estructurización de las consultas e historiales clínicos reales, para su mejor visualización por parte del clínico y mejorar el rendimiento de otros modelos de IA en diversas tareas del PLN. Las consultas clínicas reales son comúnmente textos no estructurados, donde los clínicos cortan y pegan información contenida en otras consultas anteriores, propiciando la redundancia de información y dificultando la identificación de la información clínica relevante actualizada. Mediante el procesamiento de
+LLMs generativos se pretende la creación de textos bien estructurados a partir de los anteriores, donde se señalen claramente los
+
+-antecedentes del paciente,
+-su situación actual,
+-resultados actualizados de pruebas médicas,
+-tratamiento y
+-planes de actuación,
+-entre otros.
+
+Para obtener resultados serios, sería necesario aplicar las métricas ROUGE y BLUE. Sin embargo, para ello es necesario tener una referencia de cómo debería ser el texto estructurado. La posibilidad es coger de referencia el resultado de GPT-4o, y comprobar su eficacia con un clínico.

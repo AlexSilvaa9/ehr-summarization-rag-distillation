@@ -1,0 +1,13 @@
+**/.venv*
+**/.env*
+**/models/*
+**/resultados/*
+**__pycache__/*
+
+
+# Ignorar archivos grandes
+code/RAG/chroma/0e5a837e-4c3b-42e1-9d1f-a99bdd140f7c/data_level0.bin
+code/RAG/chroma/chroma.sqlite3
+common_data/medmcqa_docs.json
+common_data/*
+code/gpt_api_EHR_summarization/*

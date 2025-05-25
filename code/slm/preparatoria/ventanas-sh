@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# Obtener la lista de modelos y extraer solo los nombres base
+models=$(ollama list | awk '{print $1}' | cut -d':' -f1 | sort -u)
+
+echo "Modelos disponibles y su ventana de contexto:"
+echo "---------------------------------------------"
+
+# Iterar sobre cada modelo y obtener su contexto
+for model in $models; do
+    # Obtener la línea con "context length" y extraer el número con awk
+    context=$(ollama show "$model" 2>/dev/null | grep -i "context length" | awk '{print $NF}')
+    
+    if [ -z "$context" ]; then
+        context="Desconocido"
+    fi
+
+    echo "$model -> Contexto: $context tokens"
+done
