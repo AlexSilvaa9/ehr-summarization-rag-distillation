@@ -10,35 +10,37 @@
 \contentsline {subsection}{\numberline {2.2}Trabajos Relacionados}{12}{subsection.2.2}%
 \contentsline {subsection}{\numberline {2.3}Tecnología}{14}{subsection.2.3}%
 \contentsline {subsubsection}{\numberline {2.3.1}Arquitectura de los Modelos de Lenguaje de Gran Escala}{14}{subsubsection.2.3.1}%
-\contentsline {subsubsection}{\numberline {2.3.2}Pre-entrenamiento, Fine-Tuning y Destilación de Conocimiento}{15}{subsubsection.2.3.2}%
-\contentsline {subsubsection}{\numberline {2.3.3}Generación Aumentada por Recuperación}{15}{subsubsection.2.3.3}%
-\contentsline {section}{\numberline {3}Metodología}{17}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Generación y validación de resúmenes modelo}{17}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Comparación de modelos SLM con resúmenes de referencia}{18}{subsection.3.2}%
-\contentsline {subsubsection}{\numberline {3.2.1}Modelos utilizados}{18}{subsubsection.3.2.1}%
-\contentsline {subsubsection}{\numberline {3.2.2}Técnicas de Prompting utilizadas}{19}{subsubsection.3.2.2}%
-\contentsline {subsubsection}{\numberline {3.2.3}Evaluación automática}{19}{subsubsection.3.2.3}%
-\contentsline {subsection}{\numberline {3.3}Implementación del modelo final}{20}{subsection.3.3}%
-\contentsline {subsubsection}{\numberline {3.3.1}RAG}{20}{subsubsection.3.3.1}%
-\contentsline {subsubsection}{\numberline {3.3.2}Ajuste fino del modelo}{21}{subsubsection.3.3.2}%
-\contentsline {subsection}{\numberline {3.4}Desarrollo de la aplicación web demostrativa}{23}{subsection.3.4}%
-\contentsline {subsubsection}{\numberline {3.4.1}Tecnologías utilizadas}{23}{subsubsection.3.4.1}%
-\contentsline {subsubsection}{\numberline {3.4.2}Endpoints de la API}{23}{subsubsection.3.4.2}%
-\contentsline {subsubsection}{\numberline {3.4.3}Funcionamiento general}{23}{subsubsection.3.4.3}%
-\contentsline {section}{\numberline {4}Resultados y Discusión}{25}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Generación y validación de resúmenes modelo}{25}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Comparación de modelos SLM con resúmenes de referencia}{25}{subsection.4.2}%
-\contentsline {subsubsection}{\numberline {4.2.1}Métricas de similitud}{25}{subsubsection.4.2.1}%
-\contentsline {subsubsection}{\numberline {4.2.2}Tiempo de inferencia}{28}{subsubsection.4.2.2}%
-\contentsline {subsection}{\numberline {4.3}Implementación de modelo final}{29}{subsection.4.3}%
-\contentsline {subsubsection}{\numberline {4.3.1}RAG}{29}{subsubsection.4.3.1}%
-\contentsline {subsubsection}{\numberline {4.3.2}Ajuste fino del modelo}{30}{subsubsection.4.3.2}%
-\contentsline {subsection}{\numberline {4.4}Desarrollo del prototipo de aplicación web}{31}{subsection.4.4}%
-\contentsline {section}{\numberline {5}Conclusiones y Líneas Futuras}{33}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Conclusiones y Líneas Futuras}{33}{subsection.5.1}%
-\contentsline {subsubsection}{\numberline {5.1.1}Conclusiones}{33}{subsubsection.5.1.1}%
-\contentsline {subsubsection}{\numberline {5.1.2}Líneas Futuras}{34}{subsubsection.5.1.2}%
-\contentsline {section}{Apéndice \numberline {A}Manual de \\ Instalación}{39}{appendix.alph1.Alph1}%
-\contentsline {section}{Apéndice \numberline {B}Código}{41}{appendix.alph2.Alph2}%
-\contentsline {subsection}{\numberline {B.1}Generacion de Resúmenes Modelo}{41}{subsection.alph2.Alph2.1}%
-\contentsline {section}{Apéndice \numberline {C}Figuras}{47}{appendix.alph3.Alph3}%
+\contentsline {subsubsection}{\numberline {2.3.2}Pre-entrenamiento, Fine-Tuning y Destilación de Conocimiento}{16}{subsubsection.2.3.2}%
+\contentsline {subsubsection}{\numberline {2.3.3}Generación Aumentada por Recuperación}{16}{subsubsection.2.3.3}%
+\contentsline {section}{\numberline {3}Metodología}{19}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Generación y validación de resúmenes modelo}{19}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Comparación de modelos SLM con resúmenes de referencia}{19}{subsection.3.2}%
+\contentsline {subsubsection}{\numberline {3.2.1}Modelos utilizados}{20}{subsubsection.3.2.1}%
+\contentsline {subsubsection}{\numberline {3.2.2}Técnicas de Prompting utilizadas}{21}{subsubsection.3.2.2}%
+\contentsline {subsubsection}{\numberline {3.2.3}Evaluación automática}{22}{subsubsection.3.2.3}%
+\contentsline {subsection}{\numberline {3.3}Implementación del modelo final}{23}{subsection.3.3}%
+\contentsline {subsubsection}{\numberline {3.3.1}Retrieval-Augmented Generation}{23}{subsubsection.3.3.1}%
+\contentsline {subsubsection}{\numberline {3.3.2}Ajuste fino del modelo}{24}{subsubsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.4}Desarrollo de la aplicación web demostrativa}{25}{subsection.3.4}%
+\contentsline {subsubsection}{\numberline {3.4.1}Tecnologías utilizadas}{26}{subsubsection.3.4.1}%
+\contentsline {subsubsection}{\numberline {3.4.2}Endpoints de la API}{26}{subsubsection.3.4.2}%
+\contentsline {subsubsection}{\numberline {3.4.3}Funcionamiento general}{26}{subsubsection.3.4.3}%
+\contentsline {section}{\numberline {4}Resultados y Discusión}{27}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Generación y validación de resúmenes modelo}{27}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Comparación de modelos SLM con resúmenes de referencia}{27}{subsection.4.2}%
+\contentsline {subsubsection}{\numberline {4.2.1}Métricas de similitud}{27}{subsubsection.4.2.1}%
+\contentsline {subsubsection}{\numberline {4.2.2}Tiempo de inferencia}{30}{subsubsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.3}Implementación de modelo final}{31}{subsection.4.3}%
+\contentsline {subsubsection}{\numberline {4.3.1}Retrieval-Augmented Generation}{31}{subsubsection.4.3.1}%
+\contentsline {subsubsection}{\numberline {4.3.2}Ajuste fino del modelo}{32}{subsubsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.4}Desarrollo del prototipo de aplicación web}{33}{subsection.4.4}%
+\contentsline {section}{\numberline {5}Conclusiones y Líneas Futuras}{35}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Conclusiones y Líneas Futuras}{35}{subsection.5.1}%
+\contentsline {subsubsection}{\numberline {5.1.1}Conclusiones}{35}{subsubsection.5.1.1}%
+\contentsline {subsubsection}{\numberline {5.1.2}Líneas Futuras}{36}{subsubsection.5.1.2}%
+\contentsline {section}{Apéndice \numberline {A}Manual de Instalación}{43}{appendix.alph1.Alph1}%
+\contentsline {section}{Apéndice \numberline {B}Aspectos técnicos y gestión del desarrollo}{45}{appendix.alph2.Alph2}%
+\contentsline {subsection}{\numberline {B.1}Dificultades técnicas y computacionales}{45}{subsection.alph2.Alph2.1}%
+\contentsline {subsection}{\numberline {B.2}Diseño experimental iterativo}{46}{subsection.alph2.Alph2.2}%
+\contentsline {subsection}{\numberline {B.3}Organización del código y subproyectos}{46}{subsection.alph2.Alph2.3}%
+\contentsline {subsection}{\numberline {B.4}Valoración final}{46}{subsection.alph2.Alph2.4}%

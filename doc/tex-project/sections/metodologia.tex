@@ -4,13 +4,9 @@
 	
 	\subsection{Generación y validación de resúmenes modelo}
 	
-	Con el objetivo de evaluar la calidad de los resúmenes generados automáticamente, se elaboró un conjunto de resúmenes modelo que sirvieron como referencia en el proceso de validación.
+	Con el objetivo de evaluar la calidad de los resúmenes generados automáticamente, se elaboró un conjunto de resúmenes modelo que sirvieron como referencia en el proceso de validación. Estos resúmenes se generaron a partir de historiales médicos anonimizados combinados con una instrucción común, que especificaba el estilo y el nivel de detalle esperado. Tanto los historiales como la instrucción fueron preparados previamente en archivos de texto plano para facilitar su procesamiento.
 	
-	Estos resúmenes se generaron a partir de historiales médicos anonimizados combinados con una instrucción común, que especificaba el estilo y el nivel de detalle esperado. Tanto los historiales como la instrucción fueron preparados previamente en archivos de texto plano para facilitar su procesamiento.
-	
-	Para la generación automática de los resúmenes se empleó la API de OpenAI, utilizando el modelo gpt-4o-mini en modo de procesamiento por lotes (batch). Este modo permite enviar múltiples solicitudes en un solo envío, lo que resulta especialmente útil cuando se trabaja con grandes volúmenes de datos. Cada solicitud incluía un historial clínico y el prompt correspondiente \parencite{openaiBatch}.
-	
-	Una vez enviado el lote, se monitorizó su estado hasta que todas las respuestas estuvieron disponibles, las cuales fueron posteriormente organizadas y vinculadas con sus respectivos historiales originales.
+	Para la generación automática de los resúmenes se empleó la API de OpenAI, utilizando el modelo gpt-4o-mini en modo de procesamiento por lotes (batch). Este modo permite enviar múltiples solicitudes en un solo envío, lo que resulta especialmente útil cuando se trabaja con grandes volúmenes de datos. Cada solicitud incluía un historial clínico y el prompt correspondiente \parencite{openaiBatch}. Una vez enviado el lote, se monitorizó su estado hasta que todas las respuestas estuvieron disponibles, las cuales fueron posteriormente organizadas y vinculadas con sus respectivos historiales originales.
 	
 	Finalmente, una muestra de los resúmenes generados fue revisada por profesionales del Hospital Clínico Universitario de Málaga, con el objetivo de que confirmasen que los textos resultantes contenían la información relevante de forma clara y adecuada, validando así su uso como referencia en la evaluación del sistema.
 	
@@ -21,8 +17,20 @@
 	
 	\subsubsection{Modelos utilizados}
 	
-	Los modelos de la tabla \ref{tab:modelos} se ejecutaron localmente mediante la herramienta ollama, que permite la interacción con modelos preentrenados de forma eficiente y a alto nivel. Ya que el objetivo de este trabajo es utilizar la cantidad mínima de cómputo, la ventaja más notable de esta herramienta es que implementa automáticamente el particionado del modelo entre GPU y CPU (conocido en inglés como offloading) si es necesario.
+Los modelos de la Tabla~\ref{tab:modelos} se ejecutaron localmente mediante la herramienta Ollama, que permite cargar y ejecutar modelos de lenguaje preentrenados de manera eficiente en sistemas locales. Ollama simplifica la gestión de modelos y ofrece compatibilidad con múltiples arquitecturas optimizadas, como Mistral, LLaMA o Gemma, facilitando su uso incluso sin conocimientos avanzados de infraestructura \parencite{ollama2023}.
+
+Uno de los principales beneficios de Ollama es que implementa automáticamente técnicas como el offloading, que consiste en repartir las cargas computacionales entre CPU y GPU según los recursos disponibles, lo que permite ejecutar modelos relativamente grandes en equipos con capacidades limitadas. Además, la herramienta admite modelos cuantizados, lo que reduce significativamente los requerimientos de memoria sin comprometer en exceso el rendimiento.
+
+El rendimiento de un modelo de lenguaje depende de múltiples factores, entre los que destacan:
+
+\begin{itemize}
+	\item \textbf{Número de parámetros}: Los parámetros son los pesos que el modelo ajusta durante su entrenamiento y que definen su capacidad de aprendizaje. Cuantos más parámetros tiene un modelo, mayor suele ser su capacidad de representar relaciones complejas, aunque también aumenta el coste computacional.
 	
+	\item \textbf{Tamaño de ventana o context length}: Este valor indica cuántos tokens puede considerar el modelo simultáneamente al generar una respuesta. Un tamaño de ventana mayor permite procesar más texto de entrada, lo cual es crucial en tareas como resumen de documentos largos o análisis de historias clínicas completas. Sin embargo, también incrementa el uso de memoria y los tiempos de inferencia.
+	
+	\item \textbf{Cuantización}: Es una técnica que consiste en reducir la precisión numérica de los parámetros del modelo (por ejemplo, de 32 bits a 4 u 8 bits). Esto disminuye el tamaño del modelo y permite ejecutar modelos más grandes en hardware con menos memoria, a costa de una ligera pérdida de precisión \parencite{huggingface_4bit}. 
+\end{itemize}
+
 	\begin{table}[h]
 		\centering
 		\caption{Lista de modelos utilizados en el proyecto.}
@@ -52,15 +60,15 @@
 	Durante las pruebas realizadas con distintos modelos de lenguaje, se aplicaron diversas metodologías de prompting con el objetivo de optimizar la calidad de las respuesta. A continuación se detallan las principales estrategias empleadas, junto con su justificación:
 	
 	\begin{itemize}
-		\item \textbf{Template-based prompting}: Se diseñaró una plantilla con la estructura que debe tener el resumen. Esta técnica, al ser consistente en contenido fue usada en la obtención de resúmenes modelos en el paso anterior. Esta técnica permite estandarizar el formato de entrada y aprovechar estructuras de lenguaje que los modelos ya han visto durante su entrenamiento \parencite{brown2020languagemodelsfewshotlearners}. 
+		\item \textbf{Template-based prompting}: Se diseña una plantilla con la estructura que debe tener el resumen. Esta técnica, al ser consistente en contenido fue usada en la obtención de resúmenes modelos en el paso anterior. Esta técnica permite estandarizar el formato de entrada y aprovechar estructuras de lenguaje que los modelos ya han visto durante su entrenamiento \parencite{brown2020languagemodelsfewshotlearners}. 
 		
-		\item \textbf{Chain-of-Thought (CoT)}: Se utilizó esta estrategia para inducir razonamiento complejo. De esta forma se mejora la capacidad para resolver problemas en etapas, especialmente en tareas lógico-matemáticas o de toma de decisiones secuencial \parencite{wei2023chainofthoughtpromptingelicitsreasoning}.
+		\item \textbf{Chain-of-Thought (CoT)}: Se utiliza esta estrategia para inducir razonamiento complejo. De esta forma se mejora la capacidad para resolver problemas en etapas, especialmente en tareas lógico-matemáticas o de toma de decisiones secuencial \parencite{wei2023chainofthoughtpromptingelicitsreasoning}.
 		
-		\item \textbf{Few-shot prompting}: Se introdujo un ejemplo dentro del prompt para mejorar la generalización del modelo en tareas específicas. Los modelos de lenguaje suelen tener buenos resultados si tienen ejemplos a seguir \parencite{parnami2022learningexamplessummaryapproaches}.
+		\item \textbf{Few-shot prompting}: Se introduce un ejemplo dentro del prompt para mejorar la generalización del modelo en tareas específicas. Los modelos de lenguaje suelen tener buenos resultados si tienen ejemplos a seguir \parencite{parnami2022learningexamplessummaryapproaches}.
 		
-		\item \textbf{Stepwise refinement}: Esta técnica consistió en dividir tareas complejas en subtareas más pequeñas que eran resueltas en etapas consecutivas. Se aplicó principalmente cuando el modelo cometía errores por falta de planificación en tareas extensas. Su efectividad ha sido destacada en investigaciones sobre razonamiento iterativo \parencite{sun2024promptchainingstepwiseprompt}.
+		\item \textbf{Stepwise refinement}: Esta técnica consistie en dividir tareas complejas en subtareas más pequeñas que eran resueltas en etapas consecutivas. Se aplia principalmente cuando el modelo comete errores por falta de planificación en tareas extensas. Su efectividad ha sido destacada en investigaciones sobre razonamiento iterativo \parencite{sun2024promptchainingstepwiseprompt}.
 		
-		\item \textbf{Generación por partes}: Dado que algunos modelos tienen ventanas de contexto limitadas (por ejemplo, 4k tokens), se optó por dividir la entrada y salida en bloques lógicos. Hacer resúmenes de partes del historial y juntarlos en uno resulta costoso pero puede hacer que se mantenga coherencia en textos largos \parencite{press2023measuringnarrowingcompositionalitygap}.
+		\item \textbf{Generación por partes}: Dado que algunos modelos tienen ventanas de contexto limitadas (por ejemplo, 4k tokens), se opta por dividir la entrada y salida en bloques lógicos. Hacer resúmenes de partes del historial y juntarlos en uno resulta costoso pero puede hacer que se mantenga coherencia en textos largos \parencite{press2023measuringnarrowingcompositionalitygap}.
 	\end{itemize}
 	
 	
@@ -75,18 +83,23 @@
 		
 	\end{itemize}
 	
-	Estas fueron implementadas usando las bibliotecas nltk y rouge-score de Python.
-	
+Estas métricas fueron implementadas utilizando las bibliotecas nltk \parencite{loper2002nltknaturallanguagetoolkit} y rouge-score \parencite{rouge_score}, ambas disponibles en Python y ampliamente utilizadas en tareas de evaluación de modelos de lenguaje.
+
 
 
 \subsection{Implementación del modelo final}
-\subsubsection{RAG}
+\subsubsection{Retrieval-Augmented Generation}
 
-Una vez seleccionado el mejor modelo, se buscó optimizar aún más su rendimiento mediante la implementación de un sistema de Retrieval-Augmented Generation (RAG).
+Una vez seleccionado el mejor modelo, se buscó optimizar aún más su rendimiento mediante la implementación de un sistema de RAG.
 
 Este enfoque consistió en proporcionar contexto adicional al modelo a partir de una base de datos de preguntas y respuestas médicas, con el objetivo de mejorar la precisión en la tarea de resumir historias clínicas. Aunque este método se emplea comúnmente en aplicaciones de asistencia conversacional, ha demostrado ser eficaz también en la generación de resúmenes clínicos \parencite{ALKHALAF2024104662}.
 
-Se utilizó un conjunto de datos compuesto por 194,000 preguntas y respuestas del dataset MEDMCQA \parencite{pmlr-v174-pal22a}, las cuales fueron transformadas en vectores de embeddings y almacenadas en una base de datos vectorial utilizando ChromaDB.
+Se utilizó un conjunto de datos compuesto por 194,000 preguntas y respuestas del dataset MEDMCQA \parencite{pmlr-v174-pal22a}, una base de datos diseñada específicamente para evaluar la comprensión lectora y la capacidad de razonamiento clínico de los modelos de lenguaje en el ámbito médico. Este dataset contiene preguntas de opción múltiple tomadas de exámenes reales de ingreso a carreras médicas en India, cubriendo una amplia variedad de especialidades clínicas como medicina general, farmacología, microbiología, patología, entre otras.
+
+Cada entrada del conjunto de datos incluye una pregunta, cuatro opciones de respuesta y la indicación de la respuesta correcta, lo que lo convierte en una fuente valiosa para tareas de evaluación de modelos en entornos médicos controlados.
+
+Para su uso en el sistema de recuperación, las preguntas y respuestas fueron convertidas a vectores de embeddings y posteriormente almacenadas en una base de datos vectorial mediante ChromaDB, lo que permite realizar búsquedas semánticas eficientes como parte del flujo de RAG.
+
 
 La Figura \ref{fig:diagrama_rag} presenta el diagrama de flujo del sistema implementado, que sigue los siguientes pasos:
 
@@ -100,15 +113,13 @@ La Figura \ref{fig:diagrama_rag} presenta el diagrama de flujo del sistema imple
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.8\textwidth]{images/diagrama-flujo-rag.png}
+	\includegraphics[width=.95\textwidth]{images/diagrama-flujo-rag.png}
 	\caption{Diagrama de flujo del sistema RAG.}
 	\label{fig:diagrama_rag}
 \end{figure}
 \subsubsection{Ajuste fino del modelo}
 
 Debido a las limitaciones en los recursos computacionales disponibles, se optó por ajustar el modelo más pequeño entre los evaluados, específicamente el llama3.2:3b-instruct, aplicando una cuantización de 4 bits para reducir el uso de memoria y facilitar el entrenamiento en hardware limitado.
-
-La cuantización es una técnica que reduce la precisión de los parámetros del modelo, disminuyendo así su tamaño y los requisitos de memoria. En particular, la cuantización a 4 bits permite representar los pesos del modelo utilizando solo 4 bits por valor, en lugar de los 32 bits típicos en punto flotante. Esto resulta en una compresión significativa del modelo, permitiendo su ejecución en dispositivos con recursos limitados \parencite{huggingface_4bit}.
 
 Para ajustar el modelo cuantizado, se empleó la técnica de Low-Rank Adaptation (LoRA), que introduce adaptadores de bajo rango en las capas del modelo. Esta metodología permite modificar solo una pequeña fracción de los parámetros, manteniendo el resto del modelo congelado, lo que reduce considerablemente los requisitos computacionales y de memoria durante el entrenamiento \parencite{hu2021lora}.
 

@@ -28,8 +28,8 @@ Los resultados de las métricas de similitud por temperatura se resumen en la ta
         \hline
         \textbf{Temperatura} & \textbf{BLEU} & \textbf{ROUGE1} & \textbf{ROUGE2} & \textbf{ROUGEL} & \textbf{BERT\_P} & \textbf{BERT\_R} & \textbf{BERT\_F1} \\
         \hline
-        0.2 & 0.082000 & 0.253000 & 0.082000 & 0.136000 & 0.700000 & 0.692000 & 0.695000 \\
-        0.8 & 0.082000 & 0.263000 & 0.083000 & 0.137000 & 0.698000 & 0.691000 & 0.694000 \\
+        0.2 & 0.082 & 0.253 & 0.082 & 0.136 & 0.7 & 0.692 & 0.695 \\
+        0.8 & 0.082 & 0.263 & 0.083 & 0.137 & 0.698 & 0.691 & 0.694 \\
         \hline
     \end{tabular}
 
@@ -49,7 +49,7 @@ En la figura \ref{fig:metricas_por_contexto_modelos} se observan las métricas p
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{images/metricas_por_contexto.png}
+    \includegraphics[width=.8\textwidth]{images/metricas_por_contexto.png}
     \caption{Métricas por contexto. Comparación de las métricas de similitud según el contexto utilizado.}
     \label{fig:metricas_por_contexto}
 \end{figure}
@@ -58,14 +58,14 @@ En las figuras \ref{fig:metricas_por_contexto_modelos} y  \ref{fig:metricas_por_
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{images/metricas_por_contexto_modelos.png}
+    \includegraphics[width=.9\textwidth]{images/metricas_por_contexto_modelos.png}
     \caption{Métricas por contexto y modelos. Comparación de las métricas de similitud para los distintos modelos bajo los mismos contextos.}
     \label{fig:metricas_por_contexto_modelos}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{images/metricas_por_contexto_deepseek.png}
+    \includegraphics[width=.9\textwidth]{images/metricas_por_contexto_deepseek.png}
     \caption{Métricas por contexto y Deepseek. Comparación de las métricas de similitud para el modelo Deepseek bajo diferentes contextos.}
     \label{fig:metricas_por_contexto_deepseek}
 \end{figure}
@@ -101,7 +101,7 @@ Teniendo en cuenta que al hacer una inferencia por partes el tiempo necesario es
 
 
 \subsection{Implementación de modelo final}
-\subsubsection{RAG}
+\subsubsection{Retrieval-Augmented Generation}
 
 En la Tabla \ref{tab:metricas_RAG} se presentan las métricas obtenidas por el modelo Phi-4 utilizando generación por partes junto con el sistema RAG multipregunta. El sistema alcanzó resultados sólidos en calidad de resumen, ligeramente mayores a los resultados sin RAG, con tiempos de ejecución de 523 segundos. Este valor incluye el tiempo requerido para realizar la búsqueda en la base de datos vectorial y ejecutar tres inferencias por segmento del historial clínico. Aunque el proceso implica un mayor coste computacional, la arquitectura permite que algunas fases, como la inferencia inicial de ideas clave, puedan ser ejecutadas en paralelo, lo cual abre la posibilidad de optimizar el rendimiento en futuras implementaciones.
 
@@ -115,8 +115,8 @@ Se ha confirmado que el sistema RAG es capaz de obtener información de contexto
 		\hline
 		& \textbf{BLEU} & \textbf{ROUGE1} & \textbf{ROUGE2} & \textbf{ROUGEL} & \textbf{BERT\_P} & \textbf{BERT\_R} & \textbf{BERT\_F1} \\
 		\hline
-		Media & 0.146019 & 0.475099 & 0.213789 & 0.259569 & 0.786528 & 0.792976 & 0.789614 \\
-		Desv. típica & 0.035366 & 0.088174 & 0.072935 & 0.063156 & 0.040259 & 0.028887 & 0.034523 \\
+		Media & 0.146 & 0.475 & 0.213 & 0.25 & 0.786 & 0.792 & 0.789 \\
+		Desv. típica & 0.035 & 0.088 & 0.072 & 0.063 & 0.04 & 0.028 & 0.034 \\
 		\hline
 	\end{tabular}
 	
@@ -124,25 +124,25 @@ Se ha confirmado que el sistema RAG es capaz de obtener información de contexto
 \subsubsection{Ajuste fino del modelo}
 Tras llevar a cabo el ajuste fino LoRA del modelo llama3.2:3b-Instruct utilizando el conjunto de datos adaptado de ruslanmv/ai-medical-chatbot  \parencite{ruslanmv2024aimedchatbot}, se observaron cambios significativos en el estilo y contenido de las respuestas generadas. En particular, el modelo ajustado tiende a replicar el patrón de respuesta del corpus de entrenamiento, incluso cuando no se proporciona un contexto explícito. Un ejemplo de ello se muestra a continuación, donde el modelo responde con una estructura y tono casi idénticos al texto original con el que fue entrenado:
 
-\begin{quote}
+\begin{tcolorbox}[quoterect]
 	\textit{Hola, gracias por tu pregunta. Después de revisar la información proporcionada, puedo decir que la paciente tiene una buena tolerancia al tratamiento con abemaciclib. [...] En resumen, la paciente tiene una buena tolerancia al tratamiento con abemaciclib y no hay efectos adversos graves en la función hepática o renal.}
-\end{quote}
+\end{tcolorbox}
 
 Este tipo de respuesta refleja directamente el estilo aprendido del dataset de entrenamiento, cuyo tono es conversacional y orientado a asesoramiento médico general:
 
-\begin{quote}
+\begin{tcolorbox}[quoterect]
 	\textit{Hi there Acne has multifactorial etiology. Only acne soap does not improve if ypu have grade 2 or more grade acne. You need to have oral and topical medications. This before writing medicines i need to confirm your grade of acne...}
-\end{quote}
+\end{tcolorbox}
 
 Por contraste, antes del ajuste fino, el modelo era capaz de adaptarse mejor al formato deseado en el contexto, generando salidas más estructuradas y acordes al estilo clínico esperado. Por ejemplo:
 
-\begin{quote}
+\begin{tcolorbox}[quoterect]
 	\textit{Resumen del Registro Médico} \\
 	\textit{Historial Médico Personal y Familiar: El paciente es de 77 años de edad. Su padre fue diagnosticado con cáncer de cavidad oral a los 50 años...}
 	
 
 
-\end{quote}
+\end{tcolorbox}
 
 Estos resultados indican que, si bien el modelo efectivamente aprendió de los datos durante el ajuste fino, la influencia del estilo de respuesta original del conjunto de datos fue excesiva y perjudicial para el objetivo final del proyecto, que requería respuestas estructuradas y en un formato médico específico. En consecuencia, se concluye que el fine-tuning fue exitoso en términos de aprendizaje, pero inadecuado en cuanto a la alineación con el estilo y formato requeridos para el sistema final.
 

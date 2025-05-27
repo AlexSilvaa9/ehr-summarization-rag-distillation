@@ -16,7 +16,7 @@
 \usepackage{hyperref}
 \usepackage{fontspec}
 \usepackage{amsmath}
-
+\usepackage{caption}
 \setmonofont{[Iosevka.ttf]}
 
 \definecolor{mygreen}{rgb}{0,0.6,0}
@@ -24,6 +24,27 @@
 \definecolor{mymauve}{rgb}{0.58,0,0.82}
 \definecolor{codebg}{HTML}{fafafa}
 \definecolor{numbergrey}{HTML}{7f7f7f}
+
+\usepackage[most]{tcolorbox}
+
+\usepackage[most]{tcolorbox}
+\tcbset{
+	quoterect/.style={
+		enhanced,
+		colback=white,
+		colframe=black!60,
+		boxrule=0.4pt,
+		arc=1pt,
+		width=\dimexpr\textwidth-2em\relax, % Reduce ancho como quote
+		left=6pt, right=6pt, top=6pt, bottom=6pt,
+		sharp corners=south,
+		fontupper=\itshape,
+		before skip=8pt,
+		after skip=8pt,
+		left skip=1em,   % Sangría izquierda como quote
+		right skip=0em
+	}
+}
 
 \hypersetup{
   colorlinks,

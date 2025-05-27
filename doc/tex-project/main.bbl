@@ -78,6 +78,35 @@
       \endverb
       \keyw{Generative AI,Nursing notes,LLAMA,Malnutrition,Summarization,RAG}
     \endentry
+    \entry{awsRAG}{online}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=3eb2c1a57a8160029f036e3dcbf84bf1}{%
+           family={{Amazon Web Services}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{fullhash}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{bibnamehash}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{authorbibnamehash}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{authornamehash}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{authorfullhash}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accedido el 27 de mayo de 2025}
+      \field{title}{What is Retrieval-Augmented Generation (RAG)?}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://aws.amazon.com/what-is/retrieval-augmented-generation/
+      \endverb
+      \verb{url}
+      \verb https://aws.amazon.com/what-is/retrieval-augmented-generation/
+      \endverb
+    \endentry
     \entry{brown2020languagemodelsfewshotlearners}{misc}{}
       \name{author}{31}{}{%
         {{un=0,uniquepart=base,hash=7c16e8d36475e58d4f2d161e6ecb7704}{%
@@ -1225,8 +1254,107 @@
       \verb https://aclanthology.org/W04-1013/
       \endverb
     \endentry
+    \entry{loper2002nltknaturallanguagetoolkit}{misc}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=2814798d9a65d66800fc6e2ec5ad7483}{%
+           family={Loper},
+           familyi={L\bibinitperiod},
+           given={Edward},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a6ad72a87713a430f7335c5656da28f1}{%
+           family={Bird},
+           familyi={B\bibinitperiod},
+           given={Steven},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{b5c89152c3d8a2802a61fc6be8829b14}
+      \strng{fullhash}{b5c89152c3d8a2802a61fc6be8829b14}
+      \strng{bibnamehash}{b5c89152c3d8a2802a61fc6be8829b14}
+      \strng{authorbibnamehash}{b5c89152c3d8a2802a61fc6be8829b14}
+      \strng{authornamehash}{b5c89152c3d8a2802a61fc6be8829b14}
+      \strng{authorfullhash}{b5c89152c3d8a2802a61fc6be8829b14}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{cs.CL}
+      \field{eprinttype}{arXiv}
+      \field{title}{NLTK: The Natural Language Toolkit}
+      \field{year}{2002}
+      \verb{eprint}
+      \verb cs/0205028
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/cs/0205028
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/cs/0205028
+      \endverb
+    \endentry
+    \entry{transformers_clinical_coding}{article}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=16de2bd03e5bce13c841bc56c9596df8}{%
+           family={López-García},
+           familyi={L\bibinithyphendelim G\bibinitperiod},
+           given={Guillermo},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c8f2b3ba14aac3967322d9462f14de1c}{%
+           family={Jerez},
+           familyi={J\bibinitperiod},
+           given={José\bibnamedelima M.},
+           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ebd4937363e3fd800ced2f8f0144ba64}{%
+           family={Ribelles},
+           familyi={R\bibinitperiod},
+           given={Nuria},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d4314d1c9cfebd6877f60fe3dc68c145}{%
+           family={Alba},
+           familyi={A\bibinitperiod},
+           given={Emilio},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=534634a6fffa3d14a5af4cdaf856c7a3}{%
+           family={Veredas},
+           familyi={V\bibinitperiod},
+           given={Francisco\bibnamedelima J.},
+           giveni={F\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{a8a0e45f73ce8f602795d7e3cced7ac8}
+      \strng{fullhash}{d9fcb6c6906d0605c82f0c2063742ddc}
+      \strng{bibnamehash}{d9fcb6c6906d0605c82f0c2063742ddc}
+      \strng{authorbibnamehash}{d9fcb6c6906d0605c82f0c2063742ddc}
+      \strng{authornamehash}{a8a0e45f73ce8f602795d7e3cced7ac8}
+      \strng{authorfullhash}{d9fcb6c6906d0605c82f0c2063742ddc}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Access}
+      \field{title}{Transformers for Clinical Coding in Spanish}
+      \field{volume}{9}
+      \field{year}{2021}
+      \field{pages}{72387\bibrangedash 72397}
+      \range{pages}{11}
+      \verb{doi}
+      \verb 10.1109/ACCESS.2021.3080085
+      \endverb
+      \keyw{Encoding;Task analysis;Neoplasms;Adaptation models;Medical services;Hospitals;Oncology;Clinical coding;deep learning;natural language processing;text classification;transformers}
+    \endentry
     \entry{MORENOBAREA2025109576}{article}{}
-      \name{author}{7}{}{%
+      \name{author}{7}{ul=2}{%
         {{un=0,uniquepart=base,hash=b506a5149fccc054650daca52de8e8ce}{%
            family={Moreno-Barea},
            familyi={M\bibinithyphendelim B\bibinitperiod},
@@ -1270,11 +1398,11 @@
            giveni={F\bibinitperiod\bibinitdelim J\bibinitperiod},
            givenun=0}}%
       }
-      \strng{namehash}{b7bb631ec9b387819b7b8de42cd92de3}
+      \strng{namehash}{749c8ae35b1efbc442e6c742f0d481eb}
       \strng{fullhash}{e30d1311427b1ff0ca2eea1810d41890}
       \strng{bibnamehash}{e30d1311427b1ff0ca2eea1810d41890}
       \strng{authorbibnamehash}{e30d1311427b1ff0ca2eea1810d41890}
-      \strng{authornamehash}{b7bb631ec9b387819b7b8de42cd92de3}
+      \strng{authornamehash}{749c8ae35b1efbc442e6c742f0d481eb}
       \strng{authorfullhash}{e30d1311427b1ff0ca2eea1810d41890}
       \field{sortinit}{M}
       \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
@@ -1301,6 +1429,187 @@
       \verb https://www.sciencedirect.com/science/article/pii/S0010482524016615
       \endverb
       \keyw{Named entity recognition,Natural language processing,De-identification,Electronic health records,Spanish}
+    \endentry
+    \entry{ner_deidentification_ehr}{article}{}
+      \name{author}{7}{ul=2}{%
+        {{un=0,uniquepart=base,hash=b506a5149fccc054650daca52de8e8ce}{%
+           family={Moreno-Barea},
+           familyi={M\bibinithyphendelim B\bibinitperiod},
+           given={Francisco\bibnamedelima J.},
+           giveni={F\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3f0858d85838d45fb2d430984ad6ab6b}{%
+           family={López-Garcı́a},
+           familyi={L\bibinithyphendelim G\bibinitperiod},
+           given={Guillermo},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0505b7c97e166248eafd01bdcb019d43}{%
+           family={Mesa},
+           familyi={M\bibinitperiod},
+           given={Héctor},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ebd4937363e3fd800ced2f8f0144ba64}{%
+           family={Ribelles},
+           familyi={R\bibinitperiod},
+           given={Nuria},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d4314d1c9cfebd6877f60fe3dc68c145}{%
+           family={Alba},
+           familyi={A\bibinitperiod},
+           given={Emilio},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c8f2b3ba14aac3967322d9462f14de1c}{%
+           family={Jerez},
+           familyi={J\bibinitperiod},
+           given={José\bibnamedelima M.},
+           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=534634a6fffa3d14a5af4cdaf856c7a3}{%
+           family={Veredas},
+           familyi={V\bibinitperiod},
+           given={Francisco\bibnamedelima J.},
+           giveni={F\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {USA}%
+      }
+      \list{publisher}{1}{%
+        {Pergamon Press, Inc.}%
+      }
+      \strng{namehash}{6c416bf17da7c9ad6683e3d294df4e9d}
+      \strng{fullhash}{608897df1ebc86ad0da3db37704eddab}
+      \strng{bibnamehash}{608897df1ebc86ad0da3db37704eddab}
+      \strng{authorbibnamehash}{608897df1ebc86ad0da3db37704eddab}
+      \strng{authornamehash}{6c416bf17da7c9ad6683e3d294df4e9d}
+      \strng{authorfullhash}{608897df1ebc86ad0da3db37704eddab}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0010-4825}
+      \field{journaltitle}{Comput. Biol. Med.}
+      \field{month}{2}
+      \field{number}{C}
+      \field{title}{Named entity recognition for de-identifying Spanish electronic health records}
+      \field{volume}{185}
+      \field{year}{2025}
+      \verb{doi}
+      \verb 10.1016/j.compbiomed.2024.109576
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1016/j.compbiomed.2024.109576
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1016/j.compbiomed.2024.109576
+      \endverb
+      \keyw{Named entity recognition,Natural language processing,De-identification,Electronic health records,Spanish}
+    \endentry
+    \entry{clinical_text_classification_cancer}{article}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=b506a5149fccc054650daca52de8e8ce}{%
+           family={Moreno-Barea},
+           familyi={M\bibinithyphendelim B\bibinitperiod},
+           given={Francisco\bibnamedelima J.},
+           giveni={F\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0505b7c97e166248eafd01bdcb019d43}{%
+           family={Mesa},
+           familyi={M\bibinitperiod},
+           given={Héctor},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ebd4937363e3fd800ced2f8f0144ba64}{%
+           family={Ribelles},
+           familyi={R\bibinitperiod},
+           given={Nuria},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d4314d1c9cfebd6877f60fe3dc68c145}{%
+           family={Alba},
+           familyi={A\bibinitperiod},
+           given={Emilio},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c8f2b3ba14aac3967322d9462f14de1c}{%
+           family={Jerez},
+           familyi={J\bibinitperiod},
+           given={José\bibnamedelima M.},
+           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Meloneras, Gran Canaria, Spain}%
+      }
+      \list{publisher}{1}{%
+        {Springer-Verlag}%
+      }
+      \strng{namehash}{b7bb631ec9b387819b7b8de42cd92de3}
+      \strng{fullhash}{134dfd8a95261ca8c2251046b8e283ad}
+      \strng{bibnamehash}{134dfd8a95261ca8c2251046b8e283ad}
+      \strng{authorbibnamehash}{134dfd8a95261ca8c2251046b8e283ad}
+      \strng{authornamehash}{b7bb631ec9b387819b7b8de42cd92de3}
+      \strng{authorfullhash}{134dfd8a95261ca8c2251046b8e283ad}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Healthcare systems currently store a large amount of clinical data, mostly unstructured textual information, such as electronic health records (EHRs). Manually extracting valuable information from these documents is costly for healthcare professionals. For example, when a patient first arrives at an oncology clinical analysis unit, clinical staff must extract information about the type of neoplasm in order to assign the appropriate clinical specialist. Automating this task is equivalent to text classification in natural language processing (NLP). In this study, we have attempted to extract the neoplasm type by processing Spanish clinical documents. A private corpus of 23, 704 real clinical cases has been processed to extract the three most common types of neoplasms in the Spanish territory: breast, lung and colorectal neoplasms. We have developed methodologies based on state-of-the-art text classification task, strategies based on machine learning and bag-of-words, based on embedding models in a supervised task, and based on bidirectional recurrent neural networks with convolutional layers (C-BiRNN). The results obtained show that the application of NLP methods is extremely helpful in performing the task of neoplasm type extraction. In particular, the 2-BiGRU model with convolutional layer and pre-trained fastText embedding obtained the best performance, with a macro-average, more representative than the micro-average due to the unbalanced data, of 0.981 for precision, 0.984 for recall and 0.982 for F1-score.}
+      \field{isbn}{978-3-031-34952-2}
+      \field{journaltitle}{Bioinformatics and Biomedical Engineering: 10th International Work-Conference, IWBBIO 2023, Meloneras, Gran Canaria, Spain, July 12–14, 2023, Proceedings, Part I}
+      \field{title}{Clinical Text Classification in Cancer Real-World Data in Spanish}
+      \field{year}{2023}
+      \field{pages}{482\bibrangedash 496}
+      \range{pages}{15}
+      \verb{doi}
+      \verb 10.1007/978-3-031-34953-9_38
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1007/978-3-031-34953-9_38
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/978-3-031-34953-9_38
+      \endverb
+      \keyw{Text Classification,Natural Language Processing,Electronic Health Records,Neoplasm cancer,Spanish}
+    \endentry
+    \entry{ollama2023}{online}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=c23e8db458397f37c8e8d98e94e55a18}{%
+           family={Ollama},
+           familyi={O\bibinitperiod}}}%
+      }
+      \strng{namehash}{c23e8db458397f37c8e8d98e94e55a18}
+      \strng{fullhash}{c23e8db458397f37c8e8d98e94e55a18}
+      \strng{bibnamehash}{c23e8db458397f37c8e8d98e94e55a18}
+      \strng{authorbibnamehash}{c23e8db458397f37c8e8d98e94e55a18}
+      \strng{authornamehash}{c23e8db458397f37c8e8d98e94e55a18}
+      \strng{authorfullhash}{c23e8db458397f37c8e8d98e94e55a18}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accedido el 27 de mayo de 2025}
+      \field{title}{Ollama - Get up and running with large language models locally}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://ollama.com
+      \endverb
+      \verb{url}
+      \verb https://ollama.com
+      \endverb
     \endentry
     \entry{openaiBatch}{misc}{}
       \name{author}{1}{}{%
@@ -1638,6 +1947,38 @@
       \field{journaltitle}{arXiv preprint arXiv:2407.10490}
       \field{title}{Learning dynamics of llm finetuning}
       \field{year}{2024}
+    \endentry
+    \entry{rouge_score}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=5b9e27c341713586dafd7304f6db987d}{%
+           family={Research},
+           familyi={R\bibinitperiod},
+           given={Google},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{5b9e27c341713586dafd7304f6db987d}
+      \strng{fullhash}{5b9e27c341713586dafd7304f6db987d}
+      \strng{bibnamehash}{5b9e27c341713586dafd7304f6db987d}
+      \strng{authorbibnamehash}{5b9e27c341713586dafd7304f6db987d}
+      \strng{authornamehash}{5b9e27c341713586dafd7304f6db987d}
+      \strng{authorfullhash}{5b9e27c341713586dafd7304f6db987d}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accedido el 27 de mayo de 2025}
+      \field{title}{ROUGE Score Python Library}
+      \field{year}{2019}
+      \verb{urlraw}
+      \verb https://github.com/google-research/google-research/tree/master/rouge
+      \endverb
+      \verb{url}
+      \verb https://github.com/google-research/google-research/tree/master/rouge
+      \endverb
     \endentry
     \entry{ryu2024keyelementinformedsllmtuningdocument}{misc}{}
       \name{author}{5}{}{%
@@ -2656,6 +2997,35 @@
       \endverb
       \keyw{Generative AI,Nursing notes,LLAMA,Malnutrition,Summarization,RAG}
     \endentry
+    \entry{awsRAG}{online}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=3eb2c1a57a8160029f036e3dcbf84bf1}{%
+           family={{Amazon Web Services}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{fullhash}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{bibnamehash}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{authorbibnamehash}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{authornamehash}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{authorfullhash}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accedido el 27 de mayo de 2025}
+      \field{title}{What is Retrieval-Augmented Generation (RAG)?}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://aws.amazon.com/what-is/retrieval-augmented-generation/
+      \endverb
+      \verb{url}
+      \verb https://aws.amazon.com/what-is/retrieval-augmented-generation/
+      \endverb
+    \endentry
     \entry{brown2020languagemodelsfewshotlearners}{misc}{}
       \name{author}{31}{}{%
         {{un=0,uniquepart=base,hash=7c16e8d36475e58d4f2d161e6ecb7704}{%
@@ -3803,8 +4173,107 @@
       \verb https://aclanthology.org/W04-1013/
       \endverb
     \endentry
+    \entry{loper2002nltknaturallanguagetoolkit}{misc}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=2814798d9a65d66800fc6e2ec5ad7483}{%
+           family={Loper},
+           familyi={L\bibinitperiod},
+           given={Edward},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a6ad72a87713a430f7335c5656da28f1}{%
+           family={Bird},
+           familyi={B\bibinitperiod},
+           given={Steven},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{b5c89152c3d8a2802a61fc6be8829b14}
+      \strng{fullhash}{b5c89152c3d8a2802a61fc6be8829b14}
+      \strng{bibnamehash}{b5c89152c3d8a2802a61fc6be8829b14}
+      \strng{authorbibnamehash}{b5c89152c3d8a2802a61fc6be8829b14}
+      \strng{authornamehash}{b5c89152c3d8a2802a61fc6be8829b14}
+      \strng{authorfullhash}{b5c89152c3d8a2802a61fc6be8829b14}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{cs.CL}
+      \field{eprinttype}{arXiv}
+      \field{title}{NLTK: The Natural Language Toolkit}
+      \field{year}{2002}
+      \verb{eprint}
+      \verb cs/0205028
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/cs/0205028
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/cs/0205028
+      \endverb
+    \endentry
+    \entry{transformers_clinical_coding}{article}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=16de2bd03e5bce13c841bc56c9596df8}{%
+           family={López-García},
+           familyi={L\bibinithyphendelim G\bibinitperiod},
+           given={Guillermo},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c8f2b3ba14aac3967322d9462f14de1c}{%
+           family={Jerez},
+           familyi={J\bibinitperiod},
+           given={José\bibnamedelima M.},
+           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ebd4937363e3fd800ced2f8f0144ba64}{%
+           family={Ribelles},
+           familyi={R\bibinitperiod},
+           given={Nuria},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d4314d1c9cfebd6877f60fe3dc68c145}{%
+           family={Alba},
+           familyi={A\bibinitperiod},
+           given={Emilio},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=534634a6fffa3d14a5af4cdaf856c7a3}{%
+           family={Veredas},
+           familyi={V\bibinitperiod},
+           given={Francisco\bibnamedelima J.},
+           giveni={F\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{a8a0e45f73ce8f602795d7e3cced7ac8}
+      \strng{fullhash}{d9fcb6c6906d0605c82f0c2063742ddc}
+      \strng{bibnamehash}{d9fcb6c6906d0605c82f0c2063742ddc}
+      \strng{authorbibnamehash}{d9fcb6c6906d0605c82f0c2063742ddc}
+      \strng{authornamehash}{a8a0e45f73ce8f602795d7e3cced7ac8}
+      \strng{authorfullhash}{d9fcb6c6906d0605c82f0c2063742ddc}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Access}
+      \field{title}{Transformers for Clinical Coding in Spanish}
+      \field{volume}{9}
+      \field{year}{2021}
+      \field{pages}{72387\bibrangedash 72397}
+      \range{pages}{11}
+      \verb{doi}
+      \verb 10.1109/ACCESS.2021.3080085
+      \endverb
+      \keyw{Encoding;Task analysis;Neoplasms;Adaptation models;Medical services;Hospitals;Oncology;Clinical coding;deep learning;natural language processing;text classification;transformers}
+    \endentry
     \entry{MORENOBAREA2025109576}{article}{}
-      \name{author}{7}{}{%
+      \name{author}{7}{ul=2}{%
         {{un=0,uniquepart=base,hash=b506a5149fccc054650daca52de8e8ce}{%
            family={Moreno-Barea},
            familyi={M\bibinithyphendelim B\bibinitperiod},
@@ -3848,11 +4317,11 @@
            giveni={F\bibinitperiod\bibinitdelim J\bibinitperiod},
            givenun=0}}%
       }
-      \strng{namehash}{b7bb631ec9b387819b7b8de42cd92de3}
+      \strng{namehash}{749c8ae35b1efbc442e6c742f0d481eb}
       \strng{fullhash}{e30d1311427b1ff0ca2eea1810d41890}
       \strng{bibnamehash}{e30d1311427b1ff0ca2eea1810d41890}
       \strng{authorbibnamehash}{e30d1311427b1ff0ca2eea1810d41890}
-      \strng{authornamehash}{b7bb631ec9b387819b7b8de42cd92de3}
+      \strng{authornamehash}{749c8ae35b1efbc442e6c742f0d481eb}
       \strng{authorfullhash}{e30d1311427b1ff0ca2eea1810d41890}
       \field{sortinit}{M}
       \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
@@ -3879,6 +4348,187 @@
       \verb https://www.sciencedirect.com/science/article/pii/S0010482524016615
       \endverb
       \keyw{Named entity recognition,Natural language processing,De-identification,Electronic health records,Spanish}
+    \endentry
+    \entry{ner_deidentification_ehr}{article}{}
+      \name{author}{7}{ul=2}{%
+        {{un=0,uniquepart=base,hash=b506a5149fccc054650daca52de8e8ce}{%
+           family={Moreno-Barea},
+           familyi={M\bibinithyphendelim B\bibinitperiod},
+           given={Francisco\bibnamedelima J.},
+           giveni={F\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3f0858d85838d45fb2d430984ad6ab6b}{%
+           family={López-Garcı́a},
+           familyi={L\bibinithyphendelim G\bibinitperiod},
+           given={Guillermo},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0505b7c97e166248eafd01bdcb019d43}{%
+           family={Mesa},
+           familyi={M\bibinitperiod},
+           given={Héctor},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ebd4937363e3fd800ced2f8f0144ba64}{%
+           family={Ribelles},
+           familyi={R\bibinitperiod},
+           given={Nuria},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d4314d1c9cfebd6877f60fe3dc68c145}{%
+           family={Alba},
+           familyi={A\bibinitperiod},
+           given={Emilio},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c8f2b3ba14aac3967322d9462f14de1c}{%
+           family={Jerez},
+           familyi={J\bibinitperiod},
+           given={José\bibnamedelima M.},
+           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=534634a6fffa3d14a5af4cdaf856c7a3}{%
+           family={Veredas},
+           familyi={V\bibinitperiod},
+           given={Francisco\bibnamedelima J.},
+           giveni={F\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {USA}%
+      }
+      \list{publisher}{1}{%
+        {Pergamon Press, Inc.}%
+      }
+      \strng{namehash}{6c416bf17da7c9ad6683e3d294df4e9d}
+      \strng{fullhash}{608897df1ebc86ad0da3db37704eddab}
+      \strng{bibnamehash}{608897df1ebc86ad0da3db37704eddab}
+      \strng{authorbibnamehash}{608897df1ebc86ad0da3db37704eddab}
+      \strng{authornamehash}{6c416bf17da7c9ad6683e3d294df4e9d}
+      \strng{authorfullhash}{608897df1ebc86ad0da3db37704eddab}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0010-4825}
+      \field{journaltitle}{Comput. Biol. Med.}
+      \field{month}{2}
+      \field{number}{C}
+      \field{title}{Named entity recognition for de-identifying Spanish electronic health records}
+      \field{volume}{185}
+      \field{year}{2025}
+      \verb{doi}
+      \verb 10.1016/j.compbiomed.2024.109576
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1016/j.compbiomed.2024.109576
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1016/j.compbiomed.2024.109576
+      \endverb
+      \keyw{Named entity recognition,Natural language processing,De-identification,Electronic health records,Spanish}
+    \endentry
+    \entry{clinical_text_classification_cancer}{article}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=b506a5149fccc054650daca52de8e8ce}{%
+           family={Moreno-Barea},
+           familyi={M\bibinithyphendelim B\bibinitperiod},
+           given={Francisco\bibnamedelima J.},
+           giveni={F\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0505b7c97e166248eafd01bdcb019d43}{%
+           family={Mesa},
+           familyi={M\bibinitperiod},
+           given={Héctor},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ebd4937363e3fd800ced2f8f0144ba64}{%
+           family={Ribelles},
+           familyi={R\bibinitperiod},
+           given={Nuria},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d4314d1c9cfebd6877f60fe3dc68c145}{%
+           family={Alba},
+           familyi={A\bibinitperiod},
+           given={Emilio},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c8f2b3ba14aac3967322d9462f14de1c}{%
+           family={Jerez},
+           familyi={J\bibinitperiod},
+           given={José\bibnamedelima M.},
+           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Meloneras, Gran Canaria, Spain}%
+      }
+      \list{publisher}{1}{%
+        {Springer-Verlag}%
+      }
+      \strng{namehash}{b7bb631ec9b387819b7b8de42cd92de3}
+      \strng{fullhash}{134dfd8a95261ca8c2251046b8e283ad}
+      \strng{bibnamehash}{134dfd8a95261ca8c2251046b8e283ad}
+      \strng{authorbibnamehash}{134dfd8a95261ca8c2251046b8e283ad}
+      \strng{authornamehash}{b7bb631ec9b387819b7b8de42cd92de3}
+      \strng{authorfullhash}{134dfd8a95261ca8c2251046b8e283ad}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Healthcare systems currently store a large amount of clinical data, mostly unstructured textual information, such as electronic health records (EHRs). Manually extracting valuable information from these documents is costly for healthcare professionals. For example, when a patient first arrives at an oncology clinical analysis unit, clinical staff must extract information about the type of neoplasm in order to assign the appropriate clinical specialist. Automating this task is equivalent to text classification in natural language processing (NLP). In this study, we have attempted to extract the neoplasm type by processing Spanish clinical documents. A private corpus of 23, 704 real clinical cases has been processed to extract the three most common types of neoplasms in the Spanish territory: breast, lung and colorectal neoplasms. We have developed methodologies based on state-of-the-art text classification task, strategies based on machine learning and bag-of-words, based on embedding models in a supervised task, and based on bidirectional recurrent neural networks with convolutional layers (C-BiRNN). The results obtained show that the application of NLP methods is extremely helpful in performing the task of neoplasm type extraction. In particular, the 2-BiGRU model with convolutional layer and pre-trained fastText embedding obtained the best performance, with a macro-average, more representative than the micro-average due to the unbalanced data, of 0.981 for precision, 0.984 for recall and 0.982 for F1-score.}
+      \field{isbn}{978-3-031-34952-2}
+      \field{journaltitle}{Bioinformatics and Biomedical Engineering: 10th International Work-Conference, IWBBIO 2023, Meloneras, Gran Canaria, Spain, July 12–14, 2023, Proceedings, Part I}
+      \field{title}{Clinical Text Classification in Cancer Real-World Data in Spanish}
+      \field{year}{2023}
+      \field{pages}{482\bibrangedash 496}
+      \range{pages}{15}
+      \verb{doi}
+      \verb 10.1007/978-3-031-34953-9_38
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1007/978-3-031-34953-9_38
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/978-3-031-34953-9_38
+      \endverb
+      \keyw{Text Classification,Natural Language Processing,Electronic Health Records,Neoplasm cancer,Spanish}
+    \endentry
+    \entry{ollama2023}{online}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=c23e8db458397f37c8e8d98e94e55a18}{%
+           family={Ollama},
+           familyi={O\bibinitperiod}}}%
+      }
+      \strng{namehash}{c23e8db458397f37c8e8d98e94e55a18}
+      \strng{fullhash}{c23e8db458397f37c8e8d98e94e55a18}
+      \strng{bibnamehash}{c23e8db458397f37c8e8d98e94e55a18}
+      \strng{authorbibnamehash}{c23e8db458397f37c8e8d98e94e55a18}
+      \strng{authornamehash}{c23e8db458397f37c8e8d98e94e55a18}
+      \strng{authorfullhash}{c23e8db458397f37c8e8d98e94e55a18}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accedido el 27 de mayo de 2025}
+      \field{title}{Ollama - Get up and running with large language models locally}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://ollama.com
+      \endverb
+      \verb{url}
+      \verb https://ollama.com
+      \endverb
     \endentry
     \entry{openaiBatch}{misc}{}
       \name{author}{1}{}{%
@@ -4216,6 +4866,38 @@
       \field{journaltitle}{arXiv preprint arXiv:2407.10490}
       \field{title}{Learning dynamics of llm finetuning}
       \field{year}{2024}
+    \endentry
+    \entry{rouge_score}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=5b9e27c341713586dafd7304f6db987d}{%
+           family={Research},
+           familyi={R\bibinitperiod},
+           given={Google},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{5b9e27c341713586dafd7304f6db987d}
+      \strng{fullhash}{5b9e27c341713586dafd7304f6db987d}
+      \strng{bibnamehash}{5b9e27c341713586dafd7304f6db987d}
+      \strng{authorbibnamehash}{5b9e27c341713586dafd7304f6db987d}
+      \strng{authornamehash}{5b9e27c341713586dafd7304f6db987d}
+      \strng{authorfullhash}{5b9e27c341713586dafd7304f6db987d}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accedido el 27 de mayo de 2025}
+      \field{title}{ROUGE Score Python Library}
+      \field{year}{2019}
+      \verb{urlraw}
+      \verb https://github.com/google-research/google-research/tree/master/rouge
+      \endverb
+      \verb{url}
+      \verb https://github.com/google-research/google-research/tree/master/rouge
+      \endverb
     \endentry
     \entry{ryu2024keyelementinformedsllmtuningdocument}{misc}{}
       \name{author}{5}{}{%

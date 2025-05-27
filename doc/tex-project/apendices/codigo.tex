@@ -1,13 +1,34 @@
-Recomendacion del tutor de explicar un poco todo el codigo aqui
-\subsection{Generacion de Resúmenes Modelo}
 
-\label{apendice:codigo:crear_json_batch}
-\lstinputlisting[language=Python]{gpt/crear_json_batch.py}
-\label{apendice:codigo:subir_batch}
-\lstinputlisting[language=Python]{gpt/subir_batch.py}
-\label{apendice:codigo:estado_batch}
-\lstinputlisting[language=Python]{gpt/estado_batch.py}
-\label{apendice:codigo:recuperar_batch}
-\lstinputlisting[language=Python]{gpt/recuperar_batch.py}
-\label{apendice:codigo:respuesta_json2archivos}
-\lstinputlisting[language=Python]{gpt/respuesta_json2_archivos.py}
+
+	\subsection{Dificultades técnicas y computacionales}
+	
+	Uno de los principales retos del proyecto ha sido realizar experimentos con modelos de lenguaje en un entorno computacional limitado, concretamente con una GPU de portátil (NVIDIA RTX 3050). Esta limitación ha generado múltiples errores de asignación de memoria, lo que obligó a estudiar e implementar técnicas de reducción de carga como la cuantización. Hasta comprender este tipo de técnicas, el proceso se volvió altamente frustrante, ya que muchos modelos no eran directamente utilizables y los errores no eran triviales de interpretar.
+	
+	Otro factor que ha influido significativamente en el desarrollo ha sido el tiempo de generación de los resúmenes. Se generaron aproximadamente 3000 resúmenes, con una media de 120 segundos por cada uno, lo que se traduce en un tiempo total de cómputo aproximado de 100 horas. Además, al aplicar estrategias como la generación por partes (prompting segmentado), este tiempo se triplica, lo que ha ralentizado mucho el proceso de prueba y validación.
+	
+	Durante el desarrollo también se consideró el uso de herramientas de MLOps como ZenML para la creación de flujos de trabajo reproducibles. Sin embargo, se optó por no integrarlas debido a la complejidad añadida que suponían en un entorno experimental todavía en evolución. La modularidad del código y una organización clara de los scripts permitieron mantener una ejecución controlada sin necesidad de infraestructura adicional.
+	
+	Asimismo, se valoró la posibilidad de utilizar sistemas de versionado de datos como DVC (Data Version Control), especialmente para gestionar distintos conjuntos de resúmenes generados y resultados intermedios. Aunque finalmente no se implementó por cuestiones de simplicidad y tiempo, su inclusión podría haber facilitado la trazabilidad de los experimentos, así como la comparación sistemática entre iteraciones del modelo.
+	
+	\subsection{Diseño experimental iterativo}
+	
+	El desarrollo del proyecto ha sido altamente iterativo. Al mismo tiempo que se iban aprendiendo nuevas técnicas (como RAG, ajuste fino o evaluación con BERTScore), se intentaban incorporar en el diseño experimental. Esto ha requerido una planificación flexible, ya que muchas veces ha sido necesario interrumpir o rediseñar experimentos al no obtener los resultados esperados o al encontrar problemas de implementación.
+	
+	Si bien la implementación del código no ha sido especialmente compleja gracias a la existencia de librerías que abstraen la mayoría de métodos, el proceso de experimentar, esperar los resultados y tener que interrumpir ejecuciones cuando algo fallaba ha resultado especialmente pesado.
+	
+	\subsection{Organización del código y subproyectos}
+	
+	El código del proyecto se ha organizado en varios subproyectos, accesibles en el repositorio:
+	
+	\begin{itemize}
+		\item code/demo/: Aplicación web mínima para probar el sistema de resumen de forma visual.
+		\item code/fine\_tunning/ Scripts para ajustar llama3.2 con LoRA y para evaluar su rendimiento.
+		\item code/gpt\_api\_EHR\_summarization/: Scripts para comunicarse con la api de OpenAI y usar procesamiento en batch.
+		\item code/RAG/: Indexación de documentos en la base de datos vectorial ChromaDB e implementación del flujo de RAG.
+		\item code/slm/: Experimentación con modelos ligeros y obtención de métricas.
+	\end{itemize}
+	
+	\subsection{Valoración final}
+	
+	A pesar de que el código no ha presentado grandes dificultades técnicas, el trabajo ha requerido una importante inversión de tiempo y esfuerzo en comprender las herramientas y diseñar un experimento viable bajo restricciones reales. El principal valor del proyecto reside en esta integración de componentes bajo limitaciones computacionales reales, algo que muchas veces no se refleja en los resultados cuantitativos, pero que forma parte esencial del trabajo de ingeniería aplicada.
+	

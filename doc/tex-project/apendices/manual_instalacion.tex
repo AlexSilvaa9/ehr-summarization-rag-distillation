@@ -1,0 +1,66 @@
+
+A continuación se detallan los pasos para instalar y ejecutar la demo del proyecto desde el repositorio `ehr-summarization-rag-distillation`.
+
+\subsection*{1. Clonar el repositorio}
+
+\begin{lstlisting}
+	git clone https://github.com/alexsilvaa9/ehr-summarization-rag-distillation.git
+	cd ehr-summarization-rag-distillation/code/demo
+\end{lstlisting}
+
+\subsection*{2. Crear entorno virtual (opcional)}
+
+\begin{lstlisting}
+	python -m venv venv
+	source venv/bin/activate      # Linux/Mac
+	venv\Scripts\activate         # Windows
+\end{lstlisting}
+
+\subsection*{3. Instalar dependencias}
+
+\begin{lstlisting}
+	pip install fastapi uvicorn ollama
+\end{lstlisting}
+
+\subsection*{4. Instalar y configurar Ollama}
+
+Descargar e instalar Ollama desde la página oficial:
+
+\begin{lstlisting}
+	https://ollama.com
+\end{lstlisting}
+
+También se puede instalar desde la terminal:
+
+\begin{itemize}
+	\item En macOS (con Homebrew):
+	\begin{lstlisting}
+		brew install ollama
+	\end{lstlisting}
+	
+	\item En Windows (con winget):
+	\begin{lstlisting}
+		winget install Ollama.Ollama
+	\end{lstlisting}
+	
+	\item En Linux (vía script oficial):
+	\begin{lstlisting}
+		curl -fsSL https://ollama.com/install.sh | sh
+	\end{lstlisting}
+\end{itemize}
+
+Después de la instalación, asegúrate de que el servicio esté activo y funcionando. Luego descarga el modelo que se utilizará, por ejemplo, `llama3.2`:
+
+\begin{lstlisting}
+	ollama pull llama3.2
+\end{lstlisting}
+
+\subsection*{5. Ejecutar la aplicación}
+
+Desde la carpeta `code/demo`, ejecutar el servidor de desarrollo:
+
+\begin{lstlisting}
+	uvicorn app.main:app --reload
+\end{lstlisting}
+
+La aplicación estará disponible en http://localhost:8000.

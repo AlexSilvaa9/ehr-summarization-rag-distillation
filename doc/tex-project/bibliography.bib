@@ -405,3 +405,78 @@ archivePrefix={arXiv},
 primaryClass={cs.CL},
 url={https://arxiv.org/abs/2404.05144}, 
 }
+@ARTICLE{transformers_clinical_coding,
+	author={López-García, Guillermo and Jerez, José M. and Ribelles, Nuria and Alba, Emilio and Veredas, Francisco J.},
+	journal={IEEE Access}, 
+	title={Transformers for Clinical Coding in Spanish}, 
+	year={2021},
+	volume={9},
+	number={},
+	pages={72387-72397},
+	keywords={Encoding;Task analysis;Neoplasms;Adaptation models;Medical services;Hospitals;Oncology;Clinical coding;deep learning;natural language processing;text classification;transformers},
+	doi={10.1109/ACCESS.2021.3080085}}
+
+@inproceedings{clinical_text_classification_cancer,
+	author = {Moreno-Barea, Francisco J. and Mesa, H\'{e}ctor and Ribelles, Nuria and Alba, Emilio and Jerez, Jos\'{e} M.},
+	title = {Clinical Text Classification in Cancer Real-World Data in Spanish},
+	year = {2023},
+	isbn = {978-3-031-34952-2},
+	publisher = {Springer-Verlag},
+	address = {Berlin, Heidelberg},
+	url = {https://doi.org/10.1007/978-3-031-34953-9_38},
+	doi = {10.1007/978-3-031-34953-9_38},
+	abstract = {Healthcare systems currently store a large amount of clinical data, mostly unstructured textual information, such as electronic health records (EHRs). Manually extracting valuable information from these documents is costly for healthcare professionals. For example, when a patient first arrives at an oncology clinical analysis unit, clinical staff must extract information about the type of neoplasm in order to assign the appropriate clinical specialist. Automating this task is equivalent to text classification in natural language processing (NLP). In this study, we have attempted to extract the neoplasm type by processing Spanish clinical documents. A private corpus of 23, 704 real clinical cases has been processed to extract the three most common types of neoplasms in the Spanish territory: breast, lung and colorectal neoplasms. We have developed methodologies based on state-of-the-art text classification task, strategies based on machine learning and bag-of-words, based on embedding models in a supervised task, and based on bidirectional recurrent neural networks with convolutional layers (C-BiRNN). The results obtained show that the application of NLP methods is extremely helpful in performing the task of neoplasm type extraction. In particular, the 2-BiGRU model with convolutional layer and pre-trained fastText embedding obtained the best performance, with a macro-average, more representative than the micro-average due to the unbalanced data, of 0.981 for precision, 0.984 for recall and 0.982 for F1-score.},
+	booktitle = {Bioinformatics and Biomedical Engineering: 10th International Work-Conference, IWBBIO 2023, Meloneras, Gran Canaria, Spain, July 12–14, 2023, Proceedings, Part I},
+	pages = {482–496},
+	numpages = {15},
+	keywords = {Text Classification, Natural Language Processing, Electronic Health Records, Neoplasm cancer, Spanish},
+	location = {Meloneras, Gran Canaria, Spain}
+}
+
+@article{ner_deidentification_ehr,
+	author = {Moreno-Barea, Francisco J. and L\'{o}pez-Garc\'{\i}a, Guillermo and Mesa, H\'{e}ctor and Ribelles, Nuria and Alba, Emilio and Jerez, Jos\'{e} M. and Veredas, Francisco J.},
+	title = {Named entity recognition for de-identifying Spanish electronic health records},
+	year = {2025},
+	issue_date = {Feb 2025},
+	publisher = {Pergamon Press, Inc.},
+	address = {USA},
+	volume = {185},
+	number = {C},
+	issn = {0010-4825},
+	url = {https://doi.org/10.1016/j.compbiomed.2024.109576},
+	doi = {10.1016/j.compbiomed.2024.109576},
+	journal = {Comput. Biol. Med.},
+	month = feb,
+	numpages = {19},
+	keywords = {Named entity recognition, Natural language processing, De-identification, Electronic health records, Spanish}
+}
+@online{awsRAG,
+	author       = {{Amazon Web Services}},
+	title        = {What is Retrieval-Augmented Generation (RAG)?},
+	year         = {2023},
+	url          = {https://aws.amazon.com/what-is/retrieval-augmented-generation/},
+	note         = {Accedido el 27 de mayo de 2025}
+}
+@online{ollama2023,
+	author       = {Ollama},
+	title        = {Ollama - Get up and running with large language models locally},
+	year         = {2023},
+	url          = {https://ollama.com},
+	note         = {Accedido el 27 de mayo de 2025}
+}
+@misc{loper2002nltknaturallanguagetoolkit,
+	title={NLTK: The Natural Language Toolkit}, 
+	author={Edward Loper and Steven Bird},
+	year={2002},
+	eprint={cs/0205028},
+	archivePrefix={arXiv},
+	primaryClass={cs.CL},
+	url={https://arxiv.org/abs/cs/0205028}, 
+}
+@misc{rouge_score,
+	author = {Google Research},
+	title = {ROUGE Score Python Library},
+	year = {2019},
+	url = {https://github.com/google-research/google-research/tree/master/rouge},
+	note = {Accedido el 27 de mayo de 2025}
+}

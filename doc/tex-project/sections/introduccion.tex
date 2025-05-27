@@ -7,17 +7,16 @@ salud frecuentemente copian y pegan información de consultas previas. Este mét
 la identificación de la información clínica actualizada y relevante, lo que puede impactar negativamente en la toma de decisiones
 médicas y en la eficiencia de los sistemas de gestión hospitalaria (\cite{searle2021estimating}).
 
-En los últimos años, los modelos de lenguaje de gran escala (LLMs, por sus siglas en inglés) han demostrado avances notables
+En los últimos años, los modelos de lenguaje de gran escala (Large Language Models, LLMs) han demostrado avances notables
 en la generación de resúmenes de alta calidad a partir de textos extensos (\cite{zhang2025comprehensivesurveyprocessorientedautomatic}). Sin embargo, estos modelos suelen ser de gran
-tamaño y, en muchos casos, su uso está limitado por costos asociados a licencias propietarias. Como respuesta a esta limitación,
+tamaño y, en muchos casos, su uso está limitado por costos asociados a licencias propietarias. Además, los LLMs suelen requerir conexión a servidores externos para su funcionamiento, lo que plantea riesgos importantes en términos de protección de datos y confidencialidad de la información procesada. Como respuesta a estas limitaciones,
 se ha promovido el desarrollo de modelos de lenguaje pequeños (Small Language Models, SLMs), los cuales ofrecen accesibilidad
 y menores requerimientos computacionales. No obstante, estos modelos presentan desafíos significativos, como la omisión de
 información clave y entidades relevantes, especialmente cuando los documentos de entrada son extensos (\cite{zhang2024optimizingautomaticsummarizationlong,grail2021globalizing}).
 
-Este trabajo surge de la necesidad de explorar soluciones eficientes para la generación de resúmenes clínicos que mantengan la
-relevancia de la información y sean accesibles en términos de costo y recursos computacionales. El dominio de aplicación de este
-estudio se encuentra en el procesamiento del lenguaje natural (NLP) aplicado al ámbito médico, con un enfoque en la mejora de
-los resúmenes clínicos generados por modelos de lenguaje pequeños.
+Este trabajo surge de la necesidad de explorar soluciones eficientes para la generación de resúmenes clínicos que mantengan la relevancia de la información y sean accesibles en términos de costo y recursos computacionales. El dominio de aplicación de este estudio se encuentra en el procesamiento del lenguaje natural (Natural Language Processing, NLP) aplicado al ámbito médico, con un enfoque en la mejora de los resúmenes clínicos generados por modelos de lenguaje pequeños. Trabajar en sistemas hospitalarios implica desafíos adicionales, como la fragmentación de los datos clínicos, la heterogeneidad en los formatos de documentación y la disponibilidad limitada de datos debido a restricciones legales y éticas. Además, la protección de la privacidad del paciente y la seguridad de la información son imperativos absolutos.
+
+
 
 
 
@@ -25,9 +24,11 @@ los resúmenes clínicos generados por modelos de lenguaje pequeños.
 
 \subsection{Marco de Investigación}
 
-Aunque este trabajo no se desarrolla directamente dentro del grupo de investigación de inteligencia computacional en biomedicina de la universidad de Málaga, guarda una estrecha relación con una de sus líneas actuales y pretende colaborar en el avance de la misma. El grupo Inteligencia Computacional en Biomedicina, liderado por el Dr. José Manuel Jerez Aragonés, pertenece al Departamento de Lenguajes y Ciencias de la Computación de la E.T.S.I. de Informática y está adscrito al Instituto Universitario de Investigación en Tecnologías Lingüísticas Multilingües (IUITLM).
+Aunque este trabajo no se desarrolla directamente dentro del grupo de investigación de Inteligencia Computacional en Biomedicina de la Universidad de Málaga, guarda una estrecha relación con una de sus líneas actuales y pretende colaborar en el avance de la misma. El grupo Inteligencia Computacional en Biomedicina, liderado por el Dr. José Manuel Jerez Aragonés, pertenece al Departamento de Lenguajes y Ciencias de la Computación de la E.T.S.I. de Informática y está adscrito al Instituto Universitario de Investigación en Tecnologías Lingüísticas Multilingües (IUITLM).
 
-Desde su fundación en enero de 2012, el grupo se ha centrado en el diseño de algoritmos de Inteligencia Artificial y Procesamiento del Lenguaje Natural para el análisis automático de información no estructurada, especialmente la contenida en historias clínicas electrónicas.
+Desde su fundación en enero de 2012, el grupo se ha centrado en el diseño de algoritmos de IA y NLP para el análisis automático de información no estructurada, especialmente la contenida en historias clínicas electrónicas. A partir del año 2020, el grupo ha realizado avances significativos en este ámbito, incluyendo el desarrollo de modelos basados en arquitecturas Transformer para la codificación clínica en español \parencite{transformers_clinical_coding}, la extracción automatizada de información relevante en oncología \parencite{clinical_text_classification_cancer}, y la des-identificación precisa de documentos médicos mediante reconocimiento de entidades nombradas \parencite{ner_deidentification_ehr}. 
+
+
 
 \subsection{Objetivos}
 \textbf{Objetivo General}  
@@ -56,7 +57,6 @@ procesamiento del lenguaje natural.
         \begin{itemize}
             \item Métricas de superposición: ROUGE, BLEU, METEOR.
             \item Métricas de similitud semántica: BERTScore.
-            \item Evaluaciones basadas en SLMs para un análisis más preciso.
         \end{itemize}
     \end{itemize}
     \item \textbf{Desarrollo de una aplicación prototipo}
@@ -83,27 +83,28 @@ procesamiento del lenguaje natural.
 \subsection{Tecnologías usadas}
 En la tabla \ref{tab:tecnologias} se encuentran las tecnologías y recursos usados en la elaboración de este trabajo.
 \begin{table}[h]
-    \centering
-    \caption{Lista de tecnologías utilizadas en el proyecto.}
-    \label{tab:tecnologias}
-    \renewcommand{\arraystretch}{1.2}
-    \begin{tabular}{c}
-        \hline
-        \textbf{Tecnologías usadas} \\
-        \hline
-        Python \\
-        PyTorch \\
-        Hugging Face \\
-        Ollama \\
-        Unsloth \\
-        ChromaDB \\
-        FastAPI \\
-        JavaScript \\
-        Visual Studio Code \\
-        Tarjeta de video Nvidia RTX 3050 Laptop \\
-        \hline
-    \end{tabular}
-
+	\centering
+	\captionsetup{skip=2pt} % Requiere \usepackage{caption}
+	\caption{Lista de tecnologías utilizadas en el proyecto.}
+	\label{tab:tecnologias}
+	{\small % Tamaño de letra reducido
+		\renewcommand{\arraystretch}{0.9} % Menor espacio vertical
+		\begin{tabular}{c}
+			\hline
+			\textbf{Tecnologías usadas} \\
+			\hline
+			Python \\
+			PyTorch \\
+			Hugging Face \\
+			Ollama \\
+			Unsloth \\
+			ChromaDB \\
+			FastAPI \\
+			JavaScript \\
+			\hline
+		\end{tabular}
+	}
 \end{table}
+
 
 \end{document}
